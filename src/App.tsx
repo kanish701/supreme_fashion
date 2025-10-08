@@ -1,12 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import Imageshoot from '../src/assets/photo-shoot.png';
-import apparelImage from '../src/assets/Free psd stylish black hoodie mockup template isolated on transparent background _ Premium AI-generated PSD.jpeg';
-import Tshirticon from '../src/assets/tshirt-icon.png';
-import apparelImg2 from '../src/assets/Sweatshirt.jpeg';
-import sportswearImg3 from '../src/assets/sportswear.png';
-import collorshirt from '../src/assets/pngwing.com (2).png';
-import doubleshirt from '../src/assets/pngwing.com (1).png';
+import Imageshoot from '../src/assets/Herosection.jpeg';
+import supreme from '../src/assets/supreme_logo_black-removebg-preview.png';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,11 +33,15 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             
-            {/* Brand Logo/Name - Stronger, accented typography */}
-            <div className={`text-2xl font-extrabold tracking-tight transition-colors duration-300 ${
-                scrollY > 50 ? 'text-gray-900' : 'text-white md:text-gray-900' // Adjust logo color based on scroll if starting on a dark hero
-            }`}>
-              SUPREME <span className="text-slate-600 font-normal">FASHION</span>
+            {/* Brand Logo/Name - Supreme logo image */}
+            <div className="flex items-center">
+              <img
+              src={supreme}
+              alt="Supreme Fashion Logo"
+              className={`h-12 w-auto transition-all duration-300 ${
+                scrollY > 50 ? '' : 'filter brightness-0 invert md:filter-none'
+              }`}
+              />
             </div>
             
             {/* Desktop Menu - Professional Links with Accent Hover */}
@@ -101,49 +100,50 @@ function App() {
           </div>
         )}
       </nav>
-
       {/* Hero Section - Color Change: Indigo -> Slate Gray */}
       <section className="relative min-h-screen py-32 md:py-40 flex items-center overflow-hidden bg-gray-50">
 
         {/* Background Gradient/Effect (Simplified Parallax) */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 to-white" />
 
-
         <div className="relative max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Content Column */}
-          <div className="text-left py-12">
+          <div className="text-left">
+        {/* Subtitle/Location - Increased tracking and clear contrast */}
+        <span className="uppercase text-sm tracking-[0.3em] font-medium text-slate-600 block mb-3">
+          FROM TIRUPUR, THE KNITWEAR CAPITAL OF INDIA 🇮🇳
+        </span>
 
-            {/* Subtitle/Location - Increased tracking and clear contrast */}
-            <span className="uppercase text-sm tracking-[0.3em] font-medium text-slate-600 block mb-3">
-              FROM TIRUPUR, THE KNITWEAR CAPITAL OF INDIA 🇮🇳
+        {/* Main Headline - Bigger, bolder, and better structured for readability */}
+        <h1 className="text-6xl md:text-6xl lg:text-7.5xl italic font-serif tracking-tight leading-tight mb-4 text-slate-600/90">
+          SUPREME <br className="hidden md:block" />
+          <span className="text-slate-600/90 italic font-serif font-light whitespace-nowrap">
+            FASHIONS
+            <span className="ml-1 inline-block align-baseline break-words md:whitespace-nowrap text-base md:text-5xl">
+          (India)
             </span>
+          </span>
+          <span className="block text-5xl md:text-6xl font-light"></span>
+        </h1>
 
-            {/* Main Headline - Bigger, bolder, and better structured for readability */}
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-tight mb-4 text-gray-900">
-              SUPREME <br className="hidden md:block" />
-              <span className="text-slate-600/90 italic font-serif font-light">FASHION</span>
-              <span className="block text-5xl md:text-6xl font-light">INDIA</span>
-            </h1>
+        {/* Core Value Proposition - Clearer and more impactful */}
+        <h2 className="text-2xl md:text-3xl font-light italic mb-6 text-gray-800">
+          Your vision,taking shape into reality
+        </h2>
 
-            {/* Core Value Proposition - Clearer and more impactful */}
-            <h2 className="text-2xl md:text-3xl font-light italic mb-6 text-gray-800">
-              Your vision, **taking shape into reality**
-            </h2>
+        {/* Description - Enhanced max-width for better line length */}
+        <p className="text-gray-600 text-lg mb-10 max-w-xl">
+          We are a premium buying house providing unparalleled sourcing and procurement solutions. With our extensive industry knowledge and global network, we deliver exceptional services that exceed client expectations, ensuring seamless and successful product acquisition.
+        </p>
 
-            {/* Description - Enhanced max-width for better line length */}
-            <p className="text-gray-600 text-lg mb-10 max-w-xl">
-              We are a **premium buying house** providing unparalleled sourcing and procurement solutions. With our extensive industry knowledge and global network, we deliver exceptional services that exceed client expectations, ensuring seamless and successful product acquisition.
-            </p>
-
-            {/* Call to Action Button - Primary focus element */}
-            <button
-              className="px-8 py-3 bg-slate-600 text-white font-semibold rounded-full shadow-lg 
-                            hover:bg-slate-700 transition duration-300 transform hover:scale-[1.02]
-                            focus:outline-none focus:ring-4 focus:ring-slate-300">
-              Explore Our Services →
-            </button>
-
+        {/* Call to Action Button - Primary focus element */}
+        <button
+          className="px-8 py-3 bg-slate-600 text-white font-semibold rounded-full shadow-lg 
+                hover:bg-slate-700 transition duration-300 transform hover:scale-[1.02]
+                focus:outline-none focus:ring-4 focus:ring-slate-300">
+          Explore Our Services →
+        </button>
           </div>
 
           {/* Right Image Column - Visually improved container */}
@@ -166,21 +166,131 @@ function App() {
         </div>
       </section>
 
-      {/* Supreme Service Section - Boxes with Hover Effect - Color Change: Indigo -> Slate Gray */}
-      <section className="py-24 lg:py-32 bg-white">
+      {/* With Passion & Purpose Section - Color Change: Indigo -> Slate Gray */}
+      <section id="process" className="py-28 lg:py-40 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
 
+          {/* Header and Description */}
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 lg:mb-20">
+            <div className="max-w-xl">
+              <h2 className="text-5xl font-extrabold tracking-tight mb-4 text-gray-900 leading-tight">
+                <span className="text-slate-600">PASSION</span> & PURPOSE
+              </h2>
+              <p className="text-gray-600 text-lg">
+                Our passion for textiles and a purpose-driven approach guide us to deliver exceptional results for our clients worldwide. Get to know the numbers that define us.
+              </p>
+            </div>
+          </div>
+
+          {/* Tabbed Navigation (Replacing Clunky Selects) */}
+          {/* This structure is better for demonstrating interactive content sections */}
+          <div className="flex flex-wrap gap-3 mb-16 border-b border-gray-200">
+            <button className="px-5 py-2 text-sm font-semibold rounded-t-lg bg-slate-600 text-white shadow-md transition duration-200">
+              EXPERTISE
+            </button>
+            <button className="px-5 py-2 text-sm font-medium rounded-t-lg text-gray-700 hover:text-slate-600 transition duration-200">
+              PHILOSOPHY
+            </button>
+            <button className="px-5 py-2 text-sm font-medium rounded-t-lg text-gray-700 hover:text-slate-600 transition duration-200">
+              VISION
+            </button>
+            <button className="px-5 py-2 text-sm font-medium rounded-t-lg text-gray-700 hover:text-slate-600 transition duration-200">
+              TEAM
+            </button>
+          </div>
+
+          {/* Metric Cards Grid - Enhanced with Hover Effects */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            {/* 1. GLOBAL BRANDS - Main Metric */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg 
+                            transition-all duration-300 ease-in-out cursor-pointer
+                            hover:shadow-slate-300/40 hover:border-slate-400">
+              <div className="text-sm font-semibold text-slate-600 mb-2 uppercase tracking-wider">GLOBAL BRANDS</div>
+              <div className="text-5xl font-extrabold mb-4 text-gray-900">50+</div>
+              <div className="text-gray-600 text-sm">We are the trusted manufacturing partner for over 50 brands across the globe, from emerging labels to retail giants.</div>
+            </div>
+
+            {/* 2. YEARS OF EXPERIENCE - Main Metric */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg 
+                            transition-all duration-300 ease-in-out cursor-pointer
+                            hover:shadow-slate-300/40 hover:border-slate-400">
+              <div className="text-sm font-semibold text-slate-600 mb-2 uppercase tracking-wider">YEARS OF EXPERIENCE</div>
+              <div className="text-5xl font-extrabold mb-4 text-gray-900">35+</div>
+              <div className="text-gray-600 text-sm">With over thirty five years in the industry, our expertise ensures a seamless and reliable production experience.</div>
+            </div>
+
+            {/* 3. OUR TEAM - Featured Card with Image and Background Contrast */}
+            <div className="bg-gray-900 border border-gray-900 rounded-xl p-8 shadow-xl text-white 
+                            transition-all duration-300 ease-in-out cursor-pointer
+                            hover:shadow-slate-500/50 hover:border-slate-400 lg:col-span-2">
+              <div className="text-sm font-semibold text-slate-400 mb-4 uppercase tracking-wider">OUR TEAM</div>
+              <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&h=300&q=80"
+                  alt="Our Team"
+                  className="rounded-lg w-24 h-24 object-cover border-4 border-slate-400"
+                />
+                <div className="text-5xl font-extrabold tracking-tight">INDUSTRY EXPERTS</div>
+              </div>
+              <div className="text-gray-300 text-base">Our skilled designers, technicians, and managers are the heart of our operations.</div>
+            </div>
+
+            {/* 4. CLIENT SATISFACTION - Grid adjusted to 4 columns */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg 
+                            transition-all duration-300 ease-in-out cursor-pointer
+                            hover:shadow-slate-300/40 hover:border-slate-400">
+              <div className="text-sm font-semibold text-slate-600 mb-2 uppercase tracking-wider">CLIENT SATISFACTION</div>
+              <div className="text-5xl font-extrabold mb-4 text-gray-900">100%</div>
+              <div className="text-gray-600 text-sm">We pride ourselves on delivering 100% client satisfaction, building lasting partnerships through quality and trust.</div>
+            </div>
+
+            {/* 5. PRODUCTION CAPACITY */}
+            {/* <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg 
+                            transition-all duration-300 ease-in-out cursor-pointer
+                            hover:shadow-slate-300/40 hover:border-slate-400">
+              <div className="text-sm font-semibold text-slate-600 mb-2 uppercase tracking-wider">PRODUCTION CAPACITY</div>
+              <div className="text-5xl font-extrabold mb-4 text-gray-900">500K+</div>
+              <div className="text-gray-600 text-sm">We produce over **500,000 high-quality garments** annually for our diverse clientele.</div>
+            </div> */}
+
+            {/* 6. FABRIC VARIETIES */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg 
+                            transition-all duration-300 ease-in-out cursor-pointer
+                            hover:shadow-slate-300/40 hover:border-slate-400">
+              <div className="text-sm font-semibold text-slate-600 mb-2 uppercase tracking-wider">FABRIC VARIETIES</div>
+              <div className="text-5xl font-extrabold mb-4 text-gray-900">200+</div>
+              <div className="text-gray-600 text-sm">We source and work with over 200 types of premium fabrics to match your exact specifications.</div>
+            </div>
+
+            {/* 7. GLOBAL REACH */}
+            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg 
+                            transition-all duration-300 ease-in-out cursor-pointer
+                            hover:shadow-slate-300/40 hover:border-slate-400">
+              <div className="text-sm font-semibold text-slate-600 mb-2 uppercase tracking-wider">GLOBAL REACH</div>
+              <div className="text-5xl font-extrabold mb-4 text-gray-900">20+</div>
+              <div className="text-gray-600 text-sm">Our products are shipped to more than 20 countries, making us a truly global manufacturing partner.</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Supreme Service Section - Boxes with Hover Effect - Color Change: Indigo -> Slate Gray */}
+      {/* <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6"> */}
+
           {/* Section Title */}
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight mb-16 lg:mb-20">
+          {/* <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight mb-16 lg:mb-20">
             Supreme is<br />
             <span className="font-extrabold text-slate-600">service</span>
-          </h2>
+          </h2> */}
 
           {/* Service Grid with Boxes and Hover */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"> */}
 
             {/* WE (Box with Hover) */}
-            <div className="flex flex-col p-8 bg-gray-50 border border-gray-200 rounded-lg shadow-sm
+            {/* <div className="flex flex-col p-8 bg-gray-50 border border-gray-200 rounded-lg shadow-sm
                           transition-all duration-300 ease-in-out
                           hover:shadow-lg hover:border-slate-400 transform hover:-translate-y-1">
               <div className="mb-6 text-4xl text-slate-600">
@@ -197,10 +307,10 @@ function App() {
               <p className="text-gray-600 text-base leading-relaxed">
                 are a fashion company with a **worldwide sourcing platform** and **GLOCAL expertise**, focused on design and product. We accompany our clients from concept to delivery, create, implement, and invest so that fashion becomes **climate friendly**.
               </p>
-            </div>
+            </div> */}
 
             {/* THINKING AHEAD (Box with Hover) */}
-            <div className="flex flex-col p-8 bg-gray-50 border border-gray-200 rounded-lg shadow-sm
+            {/* <div className="flex flex-col p-8 bg-gray-50 border border-gray-200 rounded-lg shadow-sm
                           transition-all duration-300 ease-in-out
                           hover:shadow-lg hover:border-slate-400 transform hover:-translate-y-1">
               <div className="mb-6 text-4xl text-slate-600">
@@ -216,9 +326,9 @@ function App() {
                 and working together. Bring in your expertise, wishes, and ideas, and we will work out proposals and solutions. Quick solutions, simple ones, complex ones. Always **joint solutions** that we realize for you. We are your partner.
               </p>
             </div>
-
+ */}
             {/* SOURCING (Box with Hover) */}
-            <div className="flex flex-col p-8 bg-gray-50 border border-gray-200 rounded-lg shadow-sm
+            {/* <div className="flex flex-col p-8 bg-gray-50 border border-gray-200 rounded-lg shadow-sm
                           transition-all duration-300 ease-in-out
                           hover:shadow-lg hover:border-slate-400 transform hover:-translate-y-1">
               <div className="mb-6 text-4xl text-slate-600">
@@ -235,9 +345,9 @@ function App() {
                 is **global and local** for us. We work with the biggest and best textile manufacturers that invest in **sustainable high-tech** and new-age materials, as well as with ambitious spinners and weavers engaged in traditional craftsmanship.
               </p>
             </div>
-
+ */}
             {/* GOOD PRODUCTS (Box with Hover) */}
-            <div className="flex flex-col p-8 bg-gray-50 border border-gray-200 rounded-lg shadow-sm
+            {/* <div className="flex flex-col p-8 bg-gray-50 border border-gray-200 rounded-lg shadow-sm
                           transition-all duration-300 ease-in-out
                           hover:shadow-lg hover:border-slate-400 transform hover:-translate-y-1">
               <div className="mb-6 text-4xl text-slate-600">
@@ -253,10 +363,10 @@ function App() {
               <p className="text-gray-600 text-base leading-relaxed">
                 are those that have high design standards and exciting materials, while being **environmentally friendly**. This is the quality we deliver to our customers. Apparel for women, men, kids. Activewear, footwear, and fashion accessories. And a wide range of home and pet items.
               </p>
-            </div>
+            </div> */}
 
             {/* OUR CUSTOMERS (Box with Hover) */}
-            <div className="flex flex-col p-8 bg-gray-50 border border-gray-200 rounded-lg shadow-sm
+            {/* <div className="flex flex-col p-8 bg-gray-50 border border-gray-200 rounded-lg shadow-sm
                           transition-all duration-300 ease-in-out
                           hover:shadow-lg hover:border-slate-400 transform hover:-translate-y-1">
               <div className="mb-6 text-4xl text-slate-600">
@@ -271,10 +381,10 @@ function App() {
               <p className="text-gray-600 text-base leading-relaxed">
                 are mostly international fashion brands and sometimes local start-ups. They can fly because we are the **ground crew**. We listen and implement; we are there where they can’t be themselves. For them we develop new fabrics, create four in-house collections, and present in **3D**.
               </p>
-            </div>
+            </div> */}
 
             {/* OUR STRENGTH (Box with Hover) */}
-            <div className="flex flex-col p-8 bg-gray-50 border border-gray-200 rounded-lg shadow-sm
+            {/* <div className="flex flex-col p-8 bg-gray-50 border border-gray-200 rounded-lg shadow-sm
                           transition-all duration-300 ease-in-out
                           hover:shadow-lg hover:border-slate-400 transform hover:-translate-y-1">
               <div className="mb-6 text-4xl text-slate-600">
@@ -291,11 +401,11 @@ function App() {
 
           </div>
         </div>
-      </section>
+      </section> */}
       
       {/* What We Do Section - Color Change: Indigo -> Slate Gray */}
-<section className="py-28 lg:py-40 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-6">
+      <section className="py-28 lg:py-40 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
     
     {/* Section Header */}
     <div className="text-center mb-16 lg:mb-20">
@@ -337,7 +447,7 @@ function App() {
               PRODUCT SOURCING
             </h3>
             <p className="text-gray-700 text-base">
-              We leverage our global network to find the **best fabrics, trims, and manufacturers**, ensuring premium quality and ethical sourcing from the outset.
+              We leverage our global network to find the best fabrics, trims, and manufacturers, ensuring premium quality and ethical sourcing from the outset.
             </p>
           </div>
         </div>
@@ -350,7 +460,7 @@ function App() {
               RESEARCH AND DEVELOPMENT
             </h3>
             <p className="text-gray-700 text-base">
-              Our R&D team analyzes **market trends and forecasts**, developing innovative concept products that keep your brand ahead of the curve.
+              Our R&D team analyzes market trends and forecasts, developing innovative concept products that keep your brand ahead of the curve.
             </p>
           </div>
         </div>
@@ -363,7 +473,7 @@ function App() {
               SAMPLE DEVELOPMENT
             </h3>
             <p className="text-gray-700 text-base">
-              We meticulously create and refine **samples for approval**, ensuring every detail matches your vision before moving into mass production.
+              We meticulously create and refine samples for approval, ensuring every detail matches your vision before moving into mass production.
             </p>
           </div>
         </div>
@@ -376,7 +486,7 @@ function App() {
               MERCHANDISING
             </h3>
             <p className="text-gray-700 text-base">
-              Our Merchandising Team acts as your **key project liaison**, managing communication, deadlines, and the entire production timeline from start to finish.
+              Our Merchandising Team acts as your key project liaison, managing communication, deadlines, and the entire production timeline from start to finish.
             </p>
           </div>
         </div>
@@ -389,7 +499,7 @@ function App() {
               QUALITY ASSURANCE
             </h3>
             <p className="text-gray-700 text-base">
-              We implement **rigorous quality checks** at every stage, guaranteeing that every final product meets your specifications and global excellence standards.
+              We implement rigorous quality checks at every stage, guaranteeing that every final product meets your specifications and global excellence standards.
             </p>
           </div>
         </div>
@@ -402,7 +512,7 @@ function App() {
               LOGISTIC SUPPORT
             </h3>
             <p className="text-gray-700 text-base">
-              Our professionals handle all **shipping, customs, and documentation**, ensuring timely and seamless delivery of your products to any destination worldwide.
+              Our professionals handle all shipping, customs, and documentation, ensuring timely and seamless delivery of your products to any destination worldwide.
             </p>
           </div>
         </div>
@@ -436,7 +546,7 @@ function App() {
 
               {/* Description - Larger font and better line length */}
               <p className="text-gray-700 text-lg mb-8 max-w-lg leading-relaxed border-l-4 border-slate-400 pl-4">
-                From startups to established brands, we provide **bespoke manufacturing services** that align with your unique vision. We manage the entire production cycle, ensuring **quality, efficiency, and timely delivery** for your brand, every single time.
+                From startups to established brands, we provide bespoke manufacturing services that align with your unique vision. We manage the entire production cycle, ensuring quality, efficiency, and timely delivery for your brand, every single time.
               </p>
 
               {/* Optional: Add a subtle list of key services */}
@@ -470,192 +580,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* With Passion & Purpose Section - Color Change: Indigo -> Slate Gray */}
-      <section id="process" className="py-28 lg:py-40 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-
-          {/* Header and Description */}
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16 lg:mb-20">
-            <div className="max-w-xl">
-              <h2 className="text-5xl font-extrabold tracking-tight mb-4 text-gray-900 leading-tight">
-                <span className="text-slate-600">PASSION</span> & PURPOSE
-              </h2>
-              <p className="text-gray-600 text-lg">
-                Our passion for textiles and a purpose-driven approach guide us to deliver **exceptional results** for our clients worldwide. Get to know the numbers that define us.
-              </p>
-            </div>
-          </div>
-
-          {/* Tabbed Navigation (Replacing Clunky Selects) */}
-          {/* This structure is better for demonstrating interactive content sections */}
-          <div className="flex flex-wrap gap-3 mb-16 border-b border-gray-200">
-            <button className="px-5 py-2 text-sm font-semibold rounded-t-lg bg-slate-600 text-white shadow-md transition duration-200">
-              EXPERTISE
-            </button>
-            <button className="px-5 py-2 text-sm font-medium rounded-t-lg text-gray-700 hover:text-slate-600 transition duration-200">
-              PHILOSOPHY
-            </button>
-            <button className="px-5 py-2 text-sm font-medium rounded-t-lg text-gray-700 hover:text-slate-600 transition duration-200">
-              VISION
-            </button>
-            <button className="px-5 py-2 text-sm font-medium rounded-t-lg text-gray-700 hover:text-slate-600 transition duration-200">
-              TEAM
-            </button>
-          </div>
-
-          {/* Metric Cards Grid - Enhanced with Hover Effects */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-            {/* 1. GLOBAL BRANDS - Main Metric */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg 
-                            transition-all duration-300 ease-in-out cursor-pointer
-                            hover:shadow-slate-300/40 hover:border-slate-400">
-              <div className="text-sm font-semibold text-slate-600 mb-2 uppercase tracking-wider">GLOBAL BRANDS</div>
-              <div className="text-5xl font-extrabold mb-4 text-gray-900">50+</div>
-              <div className="text-gray-600 text-sm">We are the trusted manufacturing partner for over **50 brands** across the globe, from emerging labels to retail giants.</div>
-            </div>
-
-            {/* 2. YEARS OF EXPERIENCE - Main Metric */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg 
-                            transition-all duration-300 ease-in-out cursor-pointer
-                            hover:shadow-slate-300/40 hover:border-slate-400">
-              <div className="text-sm font-semibold text-slate-600 mb-2 uppercase tracking-wider">YEARS OF EXPERIENCE</div>
-              <div className="text-5xl font-extrabold mb-4 text-gray-900">15+</div>
-              <div className="text-gray-600 text-sm">With over **fifteen years** in the industry, our expertise ensures a seamless and reliable production experience.</div>
-            </div>
-
-            {/* 3. OUR TEAM - Featured Card with Image and Background Contrast */}
-            <div className="bg-gray-900 border border-gray-900 rounded-xl p-8 shadow-xl text-white 
-                            transition-all duration-300 ease-in-out cursor-pointer
-                            hover:shadow-slate-500/50 hover:border-slate-400 lg:col-span-2">
-              <div className="text-sm font-semibold text-slate-400 mb-4 uppercase tracking-wider">OUR TEAM</div>
-              <div className="flex flex-col sm:flex-row items-center gap-6 mb-4">
-                <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&h=300&q=80"
-                  alt="Our Team"
-                  className="rounded-lg w-24 h-24 object-cover border-4 border-slate-400"
-                />
-                <div className="text-5xl font-extrabold tracking-tight">INDUSTRY EXPERTS</div>
-              </div>
-              <div className="text-gray-300 text-base">Our skilled artisans, technicians, and managers are the **heart of our operations**, driving innovation and maintaining world-class quality standards.</div>
-            </div>
-
-            {/* 4. CLIENT SATISFACTION - Grid adjusted to 4 columns */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg 
-                            transition-all duration-300 ease-in-out cursor-pointer
-                            hover:shadow-slate-300/40 hover:border-slate-400">
-              <div className="text-sm font-semibold text-slate-600 mb-2 uppercase tracking-wider">CLIENT SATISFACTION</div>
-              <div className="text-5xl font-extrabold mb-4 text-gray-900">100%</div>
-              <div className="text-gray-600 text-sm">We pride ourselves on delivering **100% client satisfaction**, building lasting partnerships through quality and trust.</div>
-            </div>
-
-            {/* 5. PRODUCTION CAPACITY */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg 
-                            transition-all duration-300 ease-in-out cursor-pointer
-                            hover:shadow-slate-300/40 hover:border-slate-400">
-              <div className="text-sm font-semibold text-slate-600 mb-2 uppercase tracking-wider">PRODUCTION CAPACITY</div>
-              <div className="text-5xl font-extrabold mb-4 text-gray-900">500K+</div>
-              <div className="text-gray-600 text-sm">We produce over **500,000 high-quality garments** annually for our diverse clientele.</div>
-            </div>
-
-            {/* 6. FABRIC VARIETIES */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg 
-                            transition-all duration-300 ease-in-out cursor-pointer
-                            hover:shadow-slate-300/40 hover:border-slate-400">
-              <div className="text-sm font-semibold text-slate-600 mb-2 uppercase tracking-wider">FABRIC VARIETIES</div>
-              <div className="text-5xl font-extrabold mb-4 text-gray-900">200+</div>
-              <div className="text-gray-600 text-sm">We source and work with over **200 types of premium fabrics** to match your exact specifications.</div>
-            </div>
-
-            {/* 7. GLOBAL REACH */}
-            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg 
-                            transition-all duration-300 ease-in-out cursor-pointer
-                            hover:shadow-slate-300/40 hover:border-slate-400">
-              <div className="text-sm font-semibold text-slate-600 mb-2 uppercase tracking-wider">GLOBAL REACH</div>
-              <div className="text-5xl font-extrabold mb-4 text-gray-900">20+</div>
-              <div className="text-gray-600 text-sm">Our products are shipped to more than **20 countries**, making us a truly global manufacturing partner.</div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Commitment, Vision & Team Section - Color Change: Indigo -> Slate Gray */}
-      <section className="py-28 lg:py-40 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-
-          {/* Optional Title for Context */}
-          <h2 className="text-4xl font-extrabold tracking-tight mb-16 text-gray-900 text-center">
-            OUR CORE VALUES IN <span className="text-slate-600">ACTION</span>
-          </h2>
-
-          {/* Enhanced Masonry-style Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-
-            {/* 1. OUR MOTTO - Featured Value Card (Span 2x2) */}
-            <div className="md:col-span-2 row-span-2 bg-slate-600 rounded-xl p-8 lg:p-10 shadow-xl flex flex-col justify-end min-h-[300px] transition-all duration-300 hover:shadow-2xl">
-              <div className="text-sm font-semibold text-slate-200 mb-2 uppercase tracking-widest">OUR MOTTO</div>
-              <div className="text-3xl font-extrabold mb-4 text-white leading-tight">COMMITMENT TO QUALITY</div>
-              <div className="text-slate-100 text-base">We are committed to delivering the **highest quality apparel**, ensuring every stitch and seam meets global standards of excellence.</div>
-            </div>
-
-            {/* 2. Image: Apparel (Span 2x1) - Tighter focus on image */}
-            <div className="col-span-2 bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:opacity-90">
-              <img src={apparelImage} alt="Premium apparel laid out" className="object-cover w-full h-full min-h-[150px]" />
-            </div>
-
-            {/* 3. Image: Double Shirt (1x1) - Small, square visual */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:opacity-90">
-              <img src={doubleshirt} alt="Sewing machine detail" className="object-cover w-full h-full min-h-[150px]" />
-            </div>
-
-            {/* 4. Image: Team Planning/Product Detail (1x1) - Small, square visual */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:opacity-90">
-              <img src="https://i.etsystatic.com/37447880/r/il/1264ab/5053847961/il_fullxfull.5053847961_qgqk.jpg" alt="Product Note" className="object-cover w-full h-full min-h-[150px]" />
-            </div>
-
-            {/* 5. Image: Fabric Rolls (1x1) */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:opacity-90">
-              <img src={sportswearImg3} alt="Fabric rolls" className="object-cover w-full h-full min-h-[150px]" />
-            </div>
-
-            {/* 6. Image: Collor Shirt (1x1) */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:opacity-90">
-              <img src={collorshirt} alt="Quality check on collared shirt" className="object-cover w-full h-full min-h-[150px]" />
-            </div>
-
-            {/* 7. OUR VISION - Secondary Value Card (Span 2x1) */}
-            <div className="col-span-2 bg-white border-2 border-slate-200 rounded-xl p-8 shadow-md flex flex-col justify-center min-h-[150px] transition-all duration-300 hover:border-slate-400 hover:shadow-lg">
-              <div className="text-sm font-semibold text-gray-500 mb-2 uppercase tracking-widest">OUR VISION</div>
-              <div className="text-2xl font-bold mb-1 text-gray-900">EMPOWERING FASHION BRANDS</div>
-              <div className="text-gray-600 text-sm">Our vision is to be the backbone of fashion brands by providing reliable, ethical, and high-quality manufacturing solutions.</div>
-            </div>
-
-            {/* 8. Image: Garment Close-up (1x1) */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:opacity-90">
-              <img src="https://i5.walmartimages.com/asr/3158e571-19b2-4a5f-92e5-2c7e90139266.7817fce2d9d55377419d46031f729146.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt="Garment detail" className="object-cover w-full h-full min-h-[150px]" />
-            </div>
-
-            {/* 9. Image: Team Collaboration (1x1) */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:opacity-90">
-              <img src="https://i.etsystatic.com/30396561/r/il/130466/3272494384/il_fullxfull.3272494384_l4r0.jpg" alt="Team discussion" className="object-cover w-full h-full min-h-[150px]" />
-            </div>
-
-            {/* 10. Image: Model/Wearable (1x1) */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:opacity-90">
-              <img src="https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/E29214s4.jpg?im=Resize,width=750" alt="Model wearing product" className="object-cover w-full h-full min-h-[150px]" />
-            </div>
-
-            {/* 11. Image: Office Workspace (1x1) */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:opacity-90">
-              <img src="https://i.pinimg.com/236x/53/3e/d9/533ed9d9db79cf780cac415b387ef108.jpg" alt="Office workspace" className="object-cover w-full h-full min-h-[150px]" />
-            </div>
-
-          </div>
-        </div>
-      </section>
-
       {/* Our Philosophy Section - Color Change: Indigo -> Slate Gray */}
       <section id="about" className="py-28 lg:py-40 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -679,7 +603,7 @@ function App() {
                 we create is one we are proud of.
               </div>
               <div className="text-gray-300">
-                Our philosophy is simple: combine traditional techniques with **modern technology** to produce apparel of unparalleled quality. We are dedicated to **ethical practices** and sustainable sourcing, ensuring every garment we create is one we are proud of.
+                Our philosophy is simple: combine traditional techniques with modern technology to produce apparel of unparalleled quality. We are dedicated to ethical practices and sustainable sourcing, ensuring every garment we create is one we are proud of.
               </div>
             </div>
           </div>
@@ -693,7 +617,7 @@ function App() {
               <div className="text-sm font-semibold text-slate-400 mb-2 uppercase tracking-widest">INNOVATION</div>
               <div className="text-2xl font-extrabold text-white mb-4">EXPERIENCED & DRIVEN</div>
               <div className="text-gray-300 text-base mb-4 flex-grow">
-                We invest in the latest manufacturing technologies to ensure precision, efficiency, and the **best possible finish** for all our products.
+                We invest in the latest manufacturing technologies to ensure precision, efficiency, and the best possible finish for all our products.
               </div>
               {/* Hover Icon (Cleaned up Arrow) */}
             </div>
@@ -732,7 +656,7 @@ function App() {
               <div className="text-sm font-semibold text-slate-400 mb-2 uppercase tracking-widest">CRAFTSMANSHIP</div>
               <div className="text-2xl font-extrabold text-white mb-4">EXPERIENCED & DRIVEN</div>
               <div className="text-gray-300 text-base mb-4 flex-grow">
-                Our skilled artisans bring **decades of experience** to every garment, ensuring meticulous attention to detail from the first cut to the final stitch.
+                Our skilled artisans bring decades of experience to every garment, ensuring meticulous attention to detail from the first cut to the final stitch.
               </div>
               {/* Hover Icon */}
               <div className="absolute top-4 right-4 text-gray-500 text-2xl transition-transform duration-300 group-hover:text-slate-400 group-hover:translate-x-1 group-hover:-translate-y-1">
@@ -759,27 +683,41 @@ function App() {
             <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
               <img
                 src="https://media.centrepointstores.com/i/centrepoint/5016797-HQ166130-SPWIN25160725_01-2100.jpg?$prodimg-d-prt-3$&$quality-standard$&fmt=auto&sm=c"
+                alt="Polo Apparel"
+                className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Overlay and Text */}
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-500/50 to-transparent p-6 flex flex-col justify-end">
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">POLO T-SHIRT</h3>
+                <p className="text-[#161515] text-sm font-medium transition-opacity duration-300 opacity-80">KNIT ESSENTIALS</p>
+              </div>
+            </div>
+
+            {/* 1. T-Shirt Card */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
+              <img
+                src="https://m.media-amazon.com/images/I/61+Hxi-JoEL._AC_SY445_.jpg"
                 alt="T-Shirt Apparel"
                 className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
               />
               {/* Overlay and Text */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent p-6 flex flex-col justify-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-500/50 to-transparent p-6 flex flex-col justify-end">
                 <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">T-SHIRTS</h3>
-                <p className="text-slate-400 text-sm font-medium transition-opacity duration-300 opacity-80">KNIT ESSENTIALS</p>
+                <p className="text-[#161515] text-sm font-medium transition-opacity duration-300 opacity-80">KNIT ESSENTIALS</p>
               </div>
             </div>
 
             {/* 2. Hoodie Card */}
             <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1554568218-0f1715e72254?auto=format&fit=crop&w=600&h=800&q=80"
+                src="https://img4.dhresource.com/webp/m/0x0/f3/albu/jc/g/02/dfdc8285-c6b8-4bff-8bbf-bbc38fae8610.jpg"
                 alt="Hoodie Outerwear"
                 className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
               />
               {/* Overlay and Text */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent p-6 flex flex-col justify-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-500/50 to-transparent p-6 flex flex-col justify-end">
                 <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">HOODIES</h3>
-                <p className="text-slate-400 text-sm font-medium opacity-80">CASUAL FLEECE</p>
+                <p className="text-[#161515] text-sm font-medium opacity-80">CASUAL FLEECE</p>
               </div>
             </div>
 
@@ -791,65 +729,23 @@ function App() {
                 className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
               />
               {/* Overlay and Text */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent p-6 flex flex-col justify-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-500/50 to-transparent p-6 flex flex-col justify-end">
                 <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">JOGGERS</h3>
-                <p className="text-slate-400 text-sm font-medium opacity-80">ACTIVEWEAR</p>
+                <p className="text-gray-100 text-sm font-medium opacity-80">ACTIVEWEAR</p>
               </div>
             </div>
 
             {/* 4. Kids Wear Card */}
             <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1611312449412-6cefac5dc3e4?auto=format&fit=crop&w=600&h=800&q=80"
+                src="https://i5.walmartimages.com/asr/3158e571-19b2-4a5f-92e5-2c7e90139266.7817fce2d9d55377419d46031f729146.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"
                 alt="Kids wear Collection"
                 className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
               />
               {/* Overlay and Text */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent p-6 flex flex-col justify-end">
-                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">KIDS WEAR</h3>
-                <p className="text-slate-400 text-sm font-medium opacity-80">JUVENILE LINE</p>
-              </div>
-            </div>
-
-            {/* 5. Accessories Card */}
-            <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1604176354204-9268737828e4?auto=format&fit=crop&w=600&h=800&q=80"
-                alt="Accessories"
-                className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
-              />
-              {/* Overlay and Text */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent p-6 flex flex-col justify-end">
-                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">ACCESSORIES</h3>
-                <p className="text-slate-400 text-sm font-medium opacity-80">BAGS & BELTS</p>
-              </div>
-            </div>
-
-            {/* 6. Sportswear Card */}
-            <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
-              <img
-                src="https://media.centrepointstores.com/i/centrepoint/JI8858-Black-JI8854-CP12052025_01-2100.jpg?$prodimg-d-prt-3-2x$&$quality-retina$&fmt=auto&sm=c"
-                alt="Sportswear Collection"
-                className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
-              />
-              {/* Overlay and Text */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent p-6 flex flex-col justify-end">
-                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">SPORTSWEAR</h3>
-                <p className="text-slate-400 text-sm font-medium opacity-80">ATHLETIC GEAR</p>
-              </div>
-            </div>
-
-            {/* 7. Formal Wear Card */}
-            <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
-              <img
-                src="https://media.centrepointstores.com/i/centrepoint/4207521-HQ166582-SPWIN25300425_01-2100.jpg?$prodimg-d-prt-3-2x$&$quality-retina$&fmt=auto&sm=c"
-                alt="Formal Wear Collection"
-                className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
-              />
-              {/* Overlay and Text */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent p-6 flex flex-col justify-end">
-                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">FORMAL WEAR</h3>
-                <p className="text-slate-400 text-sm font-medium opacity-80">SUITS & SHIRTS</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-500/50 to-transparent p-6 flex flex-col justify-end">
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-00 group-hover:opacity-100">KIDS WEAR</h3>
+                <p className="text-[#161515] text-sm font-medium opacity-80">JUVENILE LINE</p>
               </div>
             </div>
 
@@ -861,9 +757,37 @@ function App() {
                 className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
               />
               {/* Overlay and Text */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent p-6 flex flex-col justify-end">
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-500/50 to-transparent p-6 flex flex-col justify-end">
                 <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">KIDSWEAR</h3>
-                <p className="text-slate-400 text-sm font-medium opacity-80">SleepSuit</p>
+                <p className="text-[#161515] text-sm font-medium opacity-80">SleepSuit</p>
+              </div>
+            </div>
+
+            {/* 9. Footwear Card */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
+              <img
+                src="https://img.baba-blog.com/2024/03/mens-T-shirt6.jpg?x-oss-process=style%2Ffull"
+                alt="Footwear Collection"
+                className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Overlay and Text */}
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-500/50 to-transparent p-6 flex flex-col justify-end">
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">MENS WEAR</h3>
+                <p className="text-[#161515] text-sm font-medium opacity-80">T-Shirt Collections</p>
+              </div>
+            </div>
+
+            {/* 10. Footwear Card */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
+              <img
+                src="https://i.etsystatic.com/26355780/r/il/3204c9/3748518820/il_1080xN.3748518820_4vcx.jpg"
+                alt="Footwear Collection"
+                className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Overlay and Text */}
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-500/50 to-transparent p-6 flex flex-col justify-end">
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">Town Tshirt</h3>
+                <p className="text-[#161515] text-sm font-medium opacity-80">Women T-Shirt </p>
               </div>
             </div>
 
@@ -872,120 +796,96 @@ function App() {
       </section>
 
       {/* Get In Touch Footer Section - Color Change: Indigo -> Slate Gray */}
-      <footer id="contact" className="bg-gray-900 text-gray-100 pt-24 pb-8 mt-0">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
+      {/* Get In Touch Footer Section - IMPROVED UI */}
+<footer id="contact" className="bg-gray-900 text-gray-100 pt-20 pb-8 mt-0 border-t border-slate-700">
+    <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
-            {/* 1. Left: Navigation & Catalog (Spans 2 columns on large screens) */}
-            <div className="lg:col-span-2">
-              <div className="text-2xl font-extrabold tracking-tight mb-10 text-white">
-                SUPREME FASHION <span className="text-slate-500">INDIA</span>
-              </div>
-              <div className="grid grid-cols-2 gap-8">
+            {/* 1. Left: Branding and CTA Headline (Spans 5 columns on large screens) */}
+            <div className="lg:col-span-5 flex flex-col justify-start">
+                <div className="text-3xl font-extrabold tracking-tight mb-8 text-white">
+                    SUPREME FASHIONs <span className="text-slate-500 font-bold">(India)</span>
+                </div>
+                
+                {/* Main CTA - Elevated design, made slightly smaller for the footer */}
+                <h2 className="text-5xl md:text-6xl font-extrabold mb-10 tracking-tight leading-none text-white">
+                    READY TO
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-slate-200 ml-3 block sm:inline">
+                        GET STARTED?
+                    </span>
+                </h2>
 
-                {/* Navigation */}
+                <p className="text-[#161515] max-w-sm">
+                    Contact our team today to discuss your sourcing and manufacturing needs. Your vision is our next mission.
+                </p>
+            </div>
+
+            {/* 2. Right: Contact Info & Quick Links (Spans 7 columns on large screens) */}
+            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+
+                {/* --- Contact Details --- */}
                 <div>
-                  <div className="text-sm mb-4 font-semibold uppercase text-slate-400">Navigation</div>
-                  <ul className="space-y-3 text-base">
-                    <li><a href="#" className="hover:text-slate-400 transition duration-200">HOME</a></li>
-                    <li><a href="#about" className="hover:text-slate-400 transition duration-200">ABOUT US</a></li>
-                    <li><a href="#services" className="hover:text-slate-400 transition duration-200">SERVICES</a></li>
-                    <li><a href="#process" className="hover:text-slate-400 transition duration-200">PROCESS</a></li>
-                    <li><a href="#showcase" className="hover:text-slate-400 transition duration-200">SHOWCASE</a></li>
-                    <li><a href="#contact" className="hover:text-slate-400 transition duration-200">CONTACT</a></li>
-                  </ul>
+                    <div className="text-sm mb-4 font-semibold uppercase text-slate-400 border-b border-gray-700 pb-2">01 / Contact Details</div>
+
+                    {/* Phone (Consolidated for space) */}
+                    <div className="space-y-4 pt-4">
+                        <div className="">
+                            <div className="text-xs text-slate-500 mb-1 font-semibold uppercase">Office & General Inquiries</div>
+                            <div className="text-lg font-bold text-white transition-colors duration-200 hover:text-slate-400">+91-421 454000 40 / 43 555 35</div>
+                        </div>
+                        <div className="">
+                            <div className="text-xs text-slate-500 mb-1 font-semibold uppercase">Mobile & WhatsApp</div>
+                            <div className="text-lg font-bold text-white transition-colors duration-200 hover:text-slate-400">+91-98422 28885</div>
+                        </div>
+                        {/* Email */}
+                        <div className="">
+                            <div className="text-xs text-slate-500 mb-1 font-semibold uppercase">Email</div>
+                            <div className="text-lg font-bold text-white">
+                                <a href="mailto:info@supremefashion.in" className="underline hover:text-slate-400 transition duration-200">info@supremefashion.in</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                {/* Our Products */}
+                {/* --- Quick Links & Address --- */}
                 <div>
-                  <div className="text-sm mb-4 font-semibold uppercase text-slate-400">Our Products</div>
-                  <ul className="space-y-3 text-base">
-                    <li><a href="#" className="hover:text-slate-400 transition duration-200">T-SHIRTS & POLOS</a></li>
-                    <li><a href="#" className="hover:text-slate-400 transition duration-200">OUTERWEAR</a></li>
-                    <li><a href="#" className="hover:text-slate-400 transition duration-200">PANTS & SHORTS</a></li>
-                    <li><a href="#" className="hover:text-slate-400 transition duration-200">KIDS APPAREL</a></li>
-                    <li><a href="#" className="hover:text-slate-400 transition duration-200">CUSTOM APPAREL</a></li>
-                    <li><a href="#" className="font-bold text-slate-400 hover:text-slate-300 transition duration-200">VIEW ALL →</a></li>
-                  </ul>
+                    <div className="text-sm mb-4 font-semibold uppercase text-slate-400 border-b border-gray-700 pb-2">02 / Navigation</div>
+                    
+                    <div className="grid grid-cols-2 gap-x-6 gap-y-3 pt-4">
+                        {/* Navigation Links */}
+                        <ul className="space-y-3 text-base text-gray-300">
+                            <li><a href="#" className="hover:text-slate-400 transition duration-200">Home</a></li>
+                            <li><a href="#about" className="hover:text-slate-400 transition duration-200">About Us</a></li>
+                            <li><a href="#services" className="hover:text-slate-400 transition duration-200">Services</a></li>
+                            <li><a href="#process" className="hover:text-slate-400 transition duration-200">Process</a></li>
+                            <li><a href="#showcase" className="hover:text-slate-400 transition duration-200">Showcase</a></li>
+                            <li><a href="#contact" className="hover:text-slate-400 transition duration-200">Contact</a></li>
+                        </ul>
+
+                        {/* Address */}
+                        <div className="text-base font-medium text-gray-300">
+                            <div className="text-xs text-slate-500 mb-2 font-semibold uppercase">Head Office</div>
+                            1, Samundipuram Main Road,
+                            <br />
+                            Tirupur, Tamil Nadu, 641603.
+                        </div>
+                    </div>
                 </div>
-              </div>
+
             </div>
+        </div>
 
-            {/* 2. Right: Contact Info & CTA (Spans 3 columns on large screens) */}
-            <div className="lg:col-span-3">
-              {/* Main CTA - Elevated design */}
-              <h2 className="text-6xl md:text-7xl font-extrabold mb-12 tracking-tight leading-none text-white">
-                GET
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-slate-200 ml-3">
-                  IN TOUCH
-                </span>
-              </h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-
-                {/* Phone */}
-                <div className="border-b border-gray-700 pb-4">
-                  <div className="text-xs text-slate-400 mb-1 font-semibold uppercase">01 / Phone</div>
-                  <div className="text-xl font-bold text-white transition-colors duration-200 hover:text-slate-400">+91-987-654-3210</div>
-                </div>
-
-                {/* Email */}
-                <div className="border-b border-gray-700 pb-4">
-                  <div className="text-xs text-slate-400 mb-1 font-semibold uppercase">02 / Email</div>
-                  <div className="text-xl font-bold text-white">
-                    <a href="mailto:contact@supremefashion.in" className="underline hover:text-slate-400 transition duration-200">contact@supremefashion.in</a>
-                  </div>
-                </div>
-
-                {/* Address */}
-                <div className="border-b border-gray-700 pb-4">
-                  <div className="text-xs text-slate-400 mb-1 font-semibold uppercase">03 / Address</div>
-                  <div className="text-base font-medium text-gray-300">123 Industrial Estate, P.N. Road<br />Tirupur, Tamil Nadu, 641602</div>
-                </div>
-
-                {/* Socials - Professional Icons */}
-                <div className="pb-4">
-                  <div className="text-xs text-slate-400 mb-2 font-semibold uppercase">04 / Socials</div>
-                  <div className="flex gap-4 mt-2">
-                    {/* Instagram Icon */}
-                    <a href="#" className="text-gray-400 hover:text-slate-400 transition duration-200">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
-                    </a>
-                    {/* LinkedIn Icon (Professional choice for B2B) */}
-                    <a href="#" className="text-gray-400 hover:text-slate-400 transition duration-200">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
-                    </a>
-                    {/* Email/Mail Icon */}
-                    <a href="mailto:contact@supremefashion.in" className="text-gray-400 hover:text-slate-400 transition duration-200">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
-                    </a>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Bar - Cleaned up and Centered Content */}
-          <div className="border-t border-gray-800 mt-16 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 px-0">
-
-            {/* Policy Links */}
-            <div className="flex gap-6 mb-3 md:mb-0">
-              <a href="#" className="hover:text-slate-400 transition duration-200">PRIVACY POLICY</a>
-              <a href="#" className="hover:text-slate-400 transition duration-200">TERMS OF SERVICE</a>
-            </div>
+        {/* --- Bottom Bar --- */}
+        <div className="border-t border-gray-800 mt-16 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 px-0">
 
             {/* Copyright and Location */}
-            <div className="flex flex-col md:flex-row gap-4 items-center">
-              <span className="order-2 md:order-1">Supreme Fashion India © 2025</span>
-              <a href="#top" className="text-sm font-extrabold text-slate-400 hover:text-slate-300 transition duration-200 order-1 md:order-2">
-                BACK TO TOP ↑
-              </a>
+            <div className="flex flex-col md:flex-row gap-4 items-center order-2 md:order-1">
+                <span>Supreme Fashion India © 2025. All Rights Reserved.</span>
             </div>
 
-          </div>
         </div>
-      </footer>
+    </div>
+</footer>
     </div>
   );
 }
