@@ -665,7 +665,7 @@ function App() {
             {/* 1. Left: Branding and CTA Headline (Spans 5 columns on large screens) */}
             <div className="lg:col-span-5 flex flex-col justify-start">
               <div className="text-3xl font-extrabold tracking-tight mb-8 text-white">
-                SUPREME FASHIONs <span className="text-slate-500 font-bold">(India)</span>
+                SUPREME FASHIONS <span className="text-slate-500 font-bold">(India)</span>
               </div>
               
               {/* Main CTA - Elevated design, made slightly smaller for the footer */}
@@ -706,7 +706,7 @@ function App() {
                   <div className="">
                     <div className="text-xs text-slate-500 mb-1 font-semibold uppercase">Email</div>
                     <div className="text-lg font-bold text-white">
-                      <a href="mailto:info@supremefashion.in" className="underline hover:text-slate-400 transition duration-200">info@supremefashion.in</a>
+                      <a href="mailto:info@supremefashion.in" className="underline hover:text-slate-400 transition duration-200">info@supremeindia.in</a>
                     </div>
                   </div>
                 </div>
