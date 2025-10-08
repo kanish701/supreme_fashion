@@ -615,7 +615,7 @@ function App() {
             <div className="bg-gray-800 rounded-xl p-6 lg:p-8 flex flex-col min-h-[400px] relative border border-gray-700
                             transition-all duration-300 hover:bg-gray-700 hover:border-slate-600 group">
               <div className="text-sm font-semibold text-slate-400 mb-2 uppercase tracking-widest">INNOVATION</div>
-              <div className="text-2xl font-extrabold text-white mb-4">EXPERIENCED & DRIVEN</div>
+              <div className="text-2xl font-extrabold text-white mb-4">FUTURE-FOCUSED PRECISION</div>
               <div className="text-gray-300 text-base mb-4 flex-grow">
                 We invest in the latest manufacturing technologies to ensure precision, efficiency, and the best possible finish for all our products.
               </div>
@@ -626,7 +626,7 @@ function App() {
             <div className="bg-gray-800 rounded-xl p-6 lg:p-8 flex flex-col min-h-[400px] relative border border-gray-700
                             transition-all duration-300 hover:bg-gray-700 hover:border-slate-600 group">
               <div className="text-sm font-semibold text-slate-400 mb-2 uppercase tracking-widest">LEADERSHIP</div>
-              <div className="text-2xl font-extrabold text-white mb-4">EXPERIENCED & DRIVEN</div>
+              <div className="text-2xl font-extrabold text-white mb-4">STRATEGIC SUPPLY CHAIN MASTERY</div>
               <div className="text-gray-300 text-base mb-4 flex-grow">
                 Our management team combines decades of industry experience with a drive for forward-thinking strategies, guiding our clients through complex supply chains with ease.
               </div>
@@ -640,7 +640,7 @@ function App() {
             <div className="bg-gray-800 rounded-xl p-6 lg:p-8 flex flex-col min-h-[400px] relative border border-gray-700
                             transition-all duration-300 hover:bg-gray-700 hover:border-slate-600 group">
               <div className="text-sm font-semibold text-slate-400 mb-2 uppercase tracking-widest">MATERIALS</div>
-              <div className="text-2xl font-extrabold text-white mb-4">EXPERIENCED & DRIVEN</div>
+              <div className="text-2xl font-extrabold text-white mb-4">UNCOMPROMISING PREMIUM SOURCING</div>
               <div className="text-gray-300 text-base mb-4 flex-grow">
                 We source only the finest fabrics and materials from trusted suppliers to guarantee comfort, durability, and a premium feel.
               </div>
@@ -654,7 +654,7 @@ function App() {
             <div className="bg-gray-800 rounded-xl p-6 lg:p-8 flex flex-col min-h-[400px] relative border border-gray-700
                             transition-all duration-300 hover:bg-gray-700 hover:border-slate-600 group">
               <div className="text-sm font-semibold text-slate-400 mb-2 uppercase tracking-widest">CRAFTSMANSHIP</div>
-              <div className="text-2xl font-extrabold text-white mb-4">EXPERIENCED & DRIVEN</div>
+              <div className="text-2xl font-extrabold text-white mb-4">HERITAGE QUALITY & DETAIL</div>
               <div className="text-gray-300 text-base mb-4 flex-grow">
                 Our skilled artisans bring decades of experience to every garment, ensuring meticulous attention to detail from the first cut to the final stitch.
               </div>
