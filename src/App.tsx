@@ -176,7 +176,7 @@ function App() {
       </section>
 
       {/* With Passion & Purpose Section - Color Change: Indigo -> Slate Gray */}
-      <section id="process" className="py-28 lg:py-20 bg-white"> {/* Changed from gray-50 to white for subtle contrast */}
+      <section id="process" className="bg-white"> {/* Changed from gray-50 to white for subtle contrast */}
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Header and Description */}
