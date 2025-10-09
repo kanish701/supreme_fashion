@@ -2,6 +2,15 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Imageshoot from '../src/assets/Herosection.jpeg';
 import supreme from '../src/assets/supreme_logo_black-removebg-preview.png';
+import Heroimage from '../src/assets/Left-pose-image.png';
+import SEDEX from '../src/assets/sedex-.png';
+import OEKO_TEX from '../src/assets/OEKO-TEX-removebg-preview.png';
+import FAIR_TRADE from '../src/assets/global-recycled-standard-certification-service.png';
+import GOTS from '../src/assets/GOTS-removebg-preview.png';
+import Warap from '../src/assets/Warap-removebg-preview.png';
+import walmart from '../src/assets/Walmart-removebg-preview.png';
+import Disney from '../src/assets/Disnep-removebg-preview.png';
+import Oragnic from '../src/assets/images-removebg-preview.png';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,23 +35,23 @@ function App() {
       {/* Navigation - Color Change: Indigo -> Slate Gray */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         // On scroll, change from transparent to solid white with shadow
-        scrollY > 50 
-            ? 'bg-white/95 backdrop-blur-sm shadow-lg border-b border-slate-100' 
-            : 'bg-transparent'
-      }`}>
+        scrollY > 50
+          ? 'bg-white/95 backdrop-blur-sm shadow-lg border-b border-slate-100'
+          : 'bg-transparent'
+        }`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            
+
             {/* Brand Logo/Name - Supreme logo image */}
             <div className="flex items-center">
               <img
                 src={supreme}
                 alt="Supreme Fashion Logo"
                 // FIX: Removed the filter/invert logic that was hiding the logo on mobile at the top of the page.
-                className="h-12 w-auto transition-all duration-300" 
+                className="h-12 w-auto transition-all duration-300"
               />
             </div>
-            
+
             {/* Desktop Menu - Professional Links with Accent Hover */}
             <div className="hidden md:flex space-x-8">
               {['About', 'Services', 'Process', 'Showcase', 'Contact'].map((item) => (
@@ -59,7 +68,7 @@ function App() {
                   </span>
                 </button>
               ))}
-              
+
               {/* Contact Button (CTA) */}
               <button
                 onClick={() => scrollToSection('contact')}
@@ -69,7 +78,7 @@ function App() {
                 GET IN TOUCH
               </button>
             </div>
-            
+
             {/* Mobile Menu Button - Styled with consistent color */}
             <button
               className="md:hidden text-gray-700 hover:text-slate-600 transition-colors duration-300"
@@ -80,7 +89,7 @@ function App() {
             </button>
           </div>
         </div>
-        
+
         {/* Mobile Menu - Enhanced with Shadow and Accent */}
         {isMenuOpen && (
           <div className="md:hidden bg-white shadow-xl transition-all duration-300 ease-in-out">
@@ -111,7 +120,7 @@ function App() {
           <div className="text-left">
             {/* Subtitle/Location - Increased tracking and clear contrast */}
             <span className="uppercase text-sm tracking-[0.3em] font-medium text-slate-600 block mb-3">
-              FROM TIRUPUR, THE KNITWEAR CAPITAL OF INDIA 🇮🇳
+              FROM, THE KNITWEAR CAPITAL OF INDIA
             </span>
 
             {/* Main Headline - Bigger, bolder, and better structured for readability */}
@@ -120,7 +129,7 @@ function App() {
               <span className="text-slate-600/90 italic font-serif font-light whitespace-nowrap">
                 FASHIONS
                 <span className="ml-1 inline-block align-baseline break-words md:whitespace-nowrap text-base md:text-5xl">
-                (India)
+                  (India)
                 </span>
               </span>
               <span className="block text-5xl md:text-6xl font-light"></span>
@@ -167,7 +176,7 @@ function App() {
       </section>
 
       {/* With Passion & Purpose Section - Color Change: Indigo -> Slate Gray */}
-      <section id="process" className="py-28 lg:py-40 bg-white"> {/* Changed from gray-50 to white for subtle contrast */}
+      <section id="process" className="py-28 lg:py-20 bg-white"> {/* Changed from gray-50 to white for subtle contrast */}
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Header and Description */}
@@ -265,127 +274,231 @@ function App() {
         </div>
       </section>
 
-      {/* What We Do Section - Color Change: Indigo -> Slate Gray */}
-      <section className="py-28 lg:py-40 bg-gray-50">
+      {/* Our 6-Step Process Section - Reduced Top Space */}
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-    
-        {/* Section Header */}
-        <div className="text-center mb-16 lg:mb-20">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-600 mb-2">
-            Our Core Methodology
-          </p>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-gray-900 leading-tight">
-            The <span className="text-slate-600">6-Step Process</span> to Creative Execution.
-          </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            We ensure quality and consistency by following a structured and detailed approach to every project, from concept to delivery.
-          </p>
-        </div>
 
-        {/* Service Steps Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
-          {/* Left Column: Featured Visual/Icon Area */}
-          <div className="hidden lg:flex items-center justify-center relative min-h-[400px]">
-            {/* Placeholder for a large SVG or animation representing the process flow */}
-            <div className="w-full h-full bg-slate-100 rounded-3xl flex items-center justify-center overflow-hidden shadow-lg"> {/* Corrected w-164/h-1604 to w-full/h-full */}
-              <img
-                src="https://images.unsplash.com/photo-1549298822-06915f013444?auto=format&fit=crop&q=80&w=1000&h=800" // Replaced Freepik with Unsplash for better source safety
-                alt="Creative Process Visual"
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <div className="absolute top-1/4 left-1/4 text-slate-300/50 text-9xl font-extrabold opacity-50 select-none">6</div>
+          {/* Section Header */}
+          <div className="text-center mb-16 lg:mb-20">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-600 mb-2">
+              Our Core Methodology
+            </p>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-gray-900 leading-tight">
+              The <span className="text-slate-600">6-Step Process</span> to Creative Execution.
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              We ensure quality and consistency by following a structured and detailed approach to every project, from concept to delivery.
+            </p>
           </div>
-          
-          {/* Right Column: Numbered List of Services */}
-          <div className="space-y-8">
-            
-            {/* 1. PRODUCT SOURCING */}
-            <div className="flex group items-start border-b border-gray-200 pb-8 transition-colors duration-300 hover:border-slate-400">
-              <div className="text-3xl font-extrabold text-slate-600 mr-6">01</div>
-              <div>
-                <h3 className="text-2xl font-bold tracking-wide text-gray-900 mb-2 group-hover:text-slate-800 transition-colors duration-300">
-                  PRODUCT SOURCING
-                </h3>
-                <p className="text-gray-700 text-base">
-                  We leverage our global network to find the best fabrics, trims, and manufacturers, ensuring premium quality and ethical sourcing from the outset.
-                </p>
+
+          {/* Service Steps Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+            {/* Left Column: Featured Visual/Icon Area */}
+            <div className="hidden lg:flex items-center justify-center relative min-h-[400px]">
+              {/* Placeholder for a large SVG or animation representing the process flow */}
+              <div className="w-full h-full bg-slate-100 rounded-3xl flex items-center justify-center overflow-hidden shadow-lg">
+                <img
+                  src={Heroimage}
+                  alt="Creative Process Visual"
+                  className="object-cover w-full h-full"
+                />
               </div>
             </div>
-            
-            {/* 2. RESEARCH AND DEVELOPMENT */}
-            <div className="flex group items-start border-b border-gray-200 pb-8 transition-colors duration-300 hover:border-slate-400">
-              <div className="text-3xl font-extrabold text-slate-600 mr-6">02</div>
-              <div>
-                <h3 className="text-2xl font-bold tracking-wide text-gray-900 mb-2 group-hover:text-slate-800 transition-colors duration-300">
-                  RESEARCH AND DEVELOPMENT
-                </h3>
-                <p className="text-gray-700 text-base">
-                  Our R&D team analyzes market trends and forecasts, developing innovative concept products that keep your brand ahead of the curve.
-                </p>
+
+            {/* Right Column: Numbered List of Services */}
+            <div className="space-y-8">
+
+              {/* 1. PRODUCT SOURCING */}
+              <div className="flex group items-start border-b border-gray-200 pb-8 transition-colors duration-300 hover:border-slate-400">
+                <div className="text-3xl font-extrabold text-slate-600 mr-6">01</div>
+                <div>
+                  <h3 className="text-2xl font-bold tracking-wide text-gray-900 mb-2 group-hover:text-slate-800 transition-colors duration-300">
+                    PRODUCT SOURCING
+                  </h3>
+                  <p className="text-gray-700 text-base">
+                    We leverage our global network to find the best fabrics, trims, and manufacturers, ensuring premium quality and ethical sourcing from the outset.
+                  </p>
+                </div>
               </div>
-            </div>
-            
-            {/* 3. SAMPLE DEVELOPMENT */}
-            <div className="flex group items-start border-b border-gray-200 pb-8 transition-colors duration-300 hover:border-slate-400">
-              <div className="text-3xl font-extrabold text-slate-600 mr-6">03</div>
-              <div>
-                <h3 className="text-2xl font-bold tracking-wide text-gray-900 mb-2 group-hover:text-slate-800 transition-colors duration-300">
-                  SAMPLE DEVELOPMENT
-                </h3>
-                <p className="text-gray-700 text-base">
-                  We meticulously create and refine samples for approval, ensuring every detail matches your vision before moving into mass production.
-                </p>
+
+              {/* 2. RESEARCH AND DEVELOPMENT */}
+              <div className="flex group items-start border-b border-gray-200 pb-8 transition-colors duration-300 hover:border-slate-400">
+                <div className="text-3xl font-extrabold text-slate-600 mr-6">02</div>
+                <div>
+                  <h3 className="text-2xl font-bold tracking-wide text-gray-900 mb-2 group-hover:text-slate-800 transition-colors duration-300">
+                    RESEARCH AND DEVELOPMENT
+                  </h3>
+                  <p className="text-gray-700 text-base">
+                    Our R&D team analyzes market trends and forecasts, developing innovative concept products that keep your brand ahead of the curve.
+                  </p>
+                </div>
               </div>
-            </div>
-            
-            {/* 4. MERCHANDISING */}
-            <div className="flex group items-start border-b border-gray-200 pb-8 transition-colors duration-300 hover:border-slate-400">
-              <div className="text-3xl font-extrabold text-slate-600 mr-6">04</div>
-              <div>
-                <h3 className="text-2xl font-bold tracking-wide text-gray-900 mb-2 group-hover:text-slate-800 transition-colors duration-300">
-                  MERCHANDISING
-                </h3>
-                <p className="text-gray-700 text-base">
-                  Our Merchandising Team acts as your key project liaison, managing communication, deadlines, and the entire production timeline from start to finish.
-                </p>
+
+              {/* 3. SAMPLE DEVELOPMENT */}
+              <div className="flex group items-start border-b border-gray-200 pb-8 transition-colors duration-300 hover:border-slate-400">
+                <div className="text-3xl font-extrabold text-slate-600 mr-6">03</div>
+                <div>
+                  <h3 className="text-2xl font-bold tracking-wide text-gray-900 mb-2 group-hover:text-slate-800 transition-colors duration-300">
+                    SAMPLE DEVELOPMENT
+                  </h3>
+                  <p className="text-gray-700 text-base">
+                    We meticulously create and refine samples for approval, ensuring every detail matches your vision before moving into mass production.
+                  </p>
+                </div>
               </div>
-            </div>
-            
-            {/* 5. QUALITY ASSURANCE */}
-            <div className="flex group items-start border-b border-gray-200 pb-8 transition-colors duration-300 hover:border-slate-400">
-              <div className="text-3xl font-extrabold text-slate-600 mr-6">05</div>
-              <div>
-                <h3 className="text-2xl font-bold tracking-wide text-gray-900 mb-2 group-hover:text-slate-800 transition-colors duration-300">
-                  QUALITY ASSURANCE
-                </h3>
-                <p className="text-gray-700 text-base">
-                  We implement rigorous quality checks at every stage, guaranteeing that every final product meets your specifications and global excellence standards.
-                </p>
+
+              {/* 4. MERCHANDISING */}
+              <div className="flex group items-start border-b border-gray-200 pb-8 transition-colors duration-300 hover:border-slate-400">
+                <div className="text-3xl font-extrabold text-slate-600 mr-6">04</div>
+                <div>
+                  <h3 className="text-2xl font-bold tracking-wide text-gray-900 mb-2 group-hover:text-slate-800 transition-colors duration-300">
+                    MERCHANDISING
+                  </h3>
+                  <p className="text-gray-700 text-base">
+                    Our Merchandising Team acts as your key project liaison, managing communication, deadlines, and the entire production timeline from start to finish.
+                  </p>
+                </div>
               </div>
-            </div>
-            
-            {/* 6. LOGISTIC SUPPORT */}
-            <div className="flex group items-start pb-2 transition-colors duration-300">
-              <div className="text-3xl font-extrabold text-slate-600 mr-6">06</div>
-              <div>
-                <h3 className="text-2xl font-bold tracking-wide text-gray-900 mb-2 group-hover:text-slate-800 transition-colors duration-300">
-                  LOGISTIC SUPPORT
-                </h3>
-                <p className="text-gray-700 text-base">
-                  Our professionals handle all shipping, customs, and documentation, ensuring timely and seamless delivery of your products to any destination worldwide.
-                </p>
+
+              {/* 5. QUALITY ASSURANCE */}
+              <div className="flex group items-start border-b border-gray-200 pb-8 transition-colors duration-300 hover:border-slate-400">
+                <div className="text-3xl font-extrabold text-slate-600 mr-6">05</div>
+                <div>
+                  <h3 className="text-2xl font-bold tracking-wide text-gray-900 mb-2 group-hover:text-slate-800 transition-colors duration-300">
+                    QUALITY ASSURANCE
+                  </h3>
+                  <p className="text-gray-700 text-base">
+                    We implement rigorous quality checks at every stage, guaranteeing that every final product meets your specifications and global excellence standards.
+                  </p>
+                </div>
               </div>
+
+              {/* 6. LOGISTIC SUPPORT */}
+              <div className="flex group items-start pb-2 transition-colors duration-300">
+                <div className="text-3xl font-extrabold text-slate-600 mr-6">06</div>
+                <div>
+                  <h3 className="text-2xl font-bold tracking-wide text-gray-900 mb-2 group-hover:text-slate-800 transition-colors duration-300">
+                    LOGISTIC SUPPORT
+                  </h3>
+                  <p className="text-gray-700 text-base">
+                    Our professionals handle all shipping, customs, and documentation, ensuring timely and seamless delivery of your products to any destination worldwide.
+                  </p>
+                </div>
+              </div>
+
             </div>
-            
           </div>
         </div>
-      </div>
       </section>
 
+      {/* Certifications Section - IMPROVED UI & GRID LAYOUT (4 per line) */}
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-600 mb-2">
+              Commitment to Quality
+            </p>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+              Our <span className="text-slate-600">Certifications & Accreditations</span>
+            </h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto mt-4">
+              We adhere to the highest international standards, ensuring our products are ethically sourced, sustainably produced, and of premium quality.
+            </p>
+          </div>
+
+          {/* Certification Logos Grid - Strict 4-Column Layout */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-x-8 gap-y-12 items-center justify-items-center">
+
+            {/* GOTS Logo */}
+            <div className="text-center group w-full p-2">
+              <img
+                src={GOTS}
+                alt="GOTS Certified"
+                className="h-25 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '80px' }}
+              />
+            </div>
+
+            {/* OEKO-TEX Logo */}
+            <div className="text-center group w-full p-2">
+              <img
+                src={OEKO_TEX}
+                alt="OEKO-TEX Certified"
+                className="h-25 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '80px' }}
+              />
+            </div>
+
+            {/* SEDEX Logo */}
+            <div className="text-center group w-full p-2">
+              <img
+                src={SEDEX}
+                alt="SEDEX Certified"
+                className="h-20 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '80px' }}
+              />
+            </div>
+
+            {/* FAIR TRADE Logo */}
+            <div className="text-center group w-full p-2">
+              <img
+                src={FAIR_TRADE}
+                alt="Fair Trade Certified"
+                className="h-25 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '80px' }}
+              />
+            </div>
+
+            {/* WRAP Logo */}
+            <div className="text-center group w-full p-2">
+              <img
+                src={Warap}
+                alt="WRAP Certified"
+                className="h-25 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '80px' }}
+              />
+            </div>
+
+            {/* Organic Cotton Logo (Placeholder name, assuming it's the 'Oragnic' import) */}
+            <div className="text-center group w-full p-2">
+              <img
+                src={Oragnic}
+                alt="Organic Certified"
+                className="h-25 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '80px' }}
+              />
+            </div>
+
+            {/* Walmart Accreditation */}
+            <div className="text-center group w-full p-2">
+              <img
+                src={walmart}
+                alt="Walmart Approved Vendor"
+                // Use a slightly different height for this, as it's typically horizontal
+                className="h-10 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '40px', marginTop: '20px' }} // Center it vertically with others
+              />
+            </div>
+
+            {/* Disney Accreditation */}
+            <div className="text-center group w-full p-2">
+              <img
+                src={Disney}
+                alt="Disney Approved Vendor"
+                className="h-20 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '80px' }}
+              />
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
       {/* Tailored Manufacturing Solutions - Color Change: Indigo -> Slate Gray */}
-      <section id="services" className="py-28 lg:py-40 bg-white overflow-hidden"> {/* Changed from gray-50 to white */}
+      <section id="services" className="py-18 lg:py-10 bg-white overflow-hidden"> {/* Changed from gray-50 to white */}
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Grid Container with Responsive Column Order */}
@@ -443,7 +556,7 @@ function App() {
         </div>
       </section>
       {/* Our Philosophy Section - Color Change: Indigo -> Slate Gray */}
-      <section id="about" className="py-28 lg:py-40 bg-gray-900 text-white">
+      <section id="about" className="py-28 lg:py-40 bg-gray-700 text-white">
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Header and Philosophy Text - Stronger Visual Hierarchy */}
@@ -458,14 +571,11 @@ function App() {
             {/* Philosophy Text - Cleaned-up columns, larger font, and slight accent */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-lg font-light">
               <div className="text-gray-300 border-l-4 border-slate-500 pl-4">
-                Rooted in the rich textile heritage of Tirupur, Supreme Fashion India is built on a foundation of craftsmanship,
+                Rooted in the rich textile heritage of Tirupur, Supreme Fashions India is built on a foundation of craftsmanship,
                 integrity, and innovation. We believe in building partnerships, not just client lists.
                 Our philosophy is simple: combine traditional techniques with modern technology to produce apparel of
                 unparalleled quality. We are dedicated to ethical practices and sustainable sourcing, ensuring every garment
                 we create is one we are proud of.
-              </div>
-              <div className="text-gray-300">
-                Our philosophy is simple: combine traditional techniques with modern technology to produce apparel of unparalleled quality. We are dedicated to ethical practices and sustainable sourcing, ensuring every garment we create is one we are proud of.
               </div>
             </div>
           </div>
@@ -474,7 +584,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
             {/* 1. INNOVATION - Card with Image */}
-            <div className="bg-gray-800 rounded-xl p-6 lg:p-8 flex flex-col min-h-[400px] relative border border-gray-700
+            <div className="bg-gray-600 rounded-xl p-6 lg:p-8 flex flex-col min-h-[400px] relative border border-gray-700
                             transition-all duration-300 hover:bg-gray-700 hover:border-slate-600 group">
               <div className="text-sm font-semibold text-slate-400 mb-2 uppercase tracking-widest">INNOVATION</div>
               <div className="text-2xl font-extrabold text-white mb-4">FUTURE-FOCUSED PRECISION</div>
@@ -485,7 +595,7 @@ function App() {
             </div>
 
             {/* 2. LEADERSHIP - Card with Text Focus */}
-            <div className="bg-gray-800 rounded-xl p-6 lg:p-8 flex flex-col min-h-[400px] relative border border-gray-700
+            <div className="bg-gray-600 rounded-xl p-6 lg:p-8 flex flex-col min-h-[400px] relative border border-gray-700
                             transition-all duration-300 hover:bg-gray-700 hover:border-slate-600 group">
               <div className="text-sm font-semibold text-slate-400 mb-2 uppercase tracking-widest">LEADERSHIP</div>
               <div className="text-2xl font-extrabold text-white mb-4">STRATEGIC SUPPLY CHAIN MASTERY</div>
@@ -499,7 +609,7 @@ function App() {
             </div>
 
             {/* 3. MATERIALS - Card with Detailed Image Grid */}
-            <div className="bg-gray-800 rounded-xl p-6 lg:p-8 flex flex-col min-h-[400px] relative border border-gray-700
+            <div className="bg-gray-600 rounded-xl p-6 lg:p-8 flex flex-col min-h-[400px] relative border border-gray-700
                             transition-all duration-300 hover:bg-gray-700 hover:border-slate-600 group">
               <div className="text-sm font-semibold text-slate-400 mb-2 uppercase tracking-widest">MATERIALS</div>
               <div className="text-2xl font-extrabold text-white mb-4">UNCOMPROMISING PREMIUM SOURCING</div>
@@ -513,7 +623,7 @@ function App() {
             </div>
 
             {/* 4. CRAFTSMANSHIP - Card with Image */}
-            <div className="bg-gray-800 rounded-xl p-6 lg:p-8 flex flex-col min-h-[400px] relative border border-gray-700
+            <div className="bg-gray-600 rounded-xl p-6 lg:p-8 flex flex-col min-h-[400px] relative border border-gray-700
                             transition-all duration-300 hover:bg-gray-700 hover:border-slate-600 group">
               <div className="text-sm font-semibold text-slate-400 mb-2 uppercase tracking-widest">CRAFTSMANSHIP</div>
               <div className="text-2xl font-extrabold text-white mb-4">HERITAGE QUALITY & DETAIL</div>
@@ -534,7 +644,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Title - Larger, more impactful, and uses accent color */}
-          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 tracking-tight text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 tracking-tight text-gray-100">
             OUR <span className="text-slate-600">PRODUCT SHOWCASE</span>
           </h2>
 
@@ -550,7 +660,7 @@ function App() {
               />
               {/* Overlay and Text */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent p-6 flex flex-col justify-end"> {/* Used gray-900 for dark gradient */}
-                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">POLO T-SHIRT</h3>
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">POLOS</h3>
                 <p className="text-white text-sm font-medium transition-opacity duration-300 opacity-80">KNIT ESSENTIALS</p> {/* Changed color for visibility */}
               </div>
             </div>
@@ -606,8 +716,8 @@ function App() {
               />
               {/* Overlay and Text */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent p-6 flex flex-col justify-end">
-                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-00 group-hover:opacity-100">KIDS WEAR</h3>
-                <p className="text-white text-sm font-medium opacity-80">JUVENILE LINE</p>
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-00 group-hover:opacity-100">COMFPRT NIGHTS</h3>
+                <p className="text-white text-sm font-medium opacity-80">ALL CATEGORIES</p>
               </div>
             </div>
 
@@ -620,7 +730,7 @@ function App() {
               />
               {/* Overlay and Text */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent p-6 flex flex-col justify-end">
-                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">KIDSWEAR</h3>
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">BABT</h3>
                 <p className="text-white text-sm font-medium opacity-80">SleepSuit</p>
               </div>
             </div>
@@ -634,8 +744,8 @@ function App() {
               />
               {/* Overlay and Text */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent p-6 flex flex-col justify-end">
-                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">MENS WEAR</h3>
-                <p className="text-white text-sm font-medium opacity-80">T-Shirt Collections</p>
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">MENS</h3>
+                <p className="text-white text-sm font-medium opacity-80">CASUALS</p>
               </div>
             </div>
 
@@ -648,8 +758,64 @@ function App() {
               />
               {/* Overlay and Text */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent p-6 flex flex-col justify-end">
-                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">WOMEN T-SHIRT</h3> {/* Changed to be more descriptive */}
-                <p className="text-white text-sm font-medium opacity-80">Town Collection </p>
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">WOMENS</h3> {/* Changed to be more descriptive */}
+                <p className="text-white text-sm font-medium opacity-80">CASUALS</p>
+              </div>
+            </div>
+
+            {/* 5. Kids Wear Card (Index 8 in original code) */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
+              <img
+                src="https://media.babyshopstores.com/i/babyshop/PKV013XS25MULTICOLORMULTISHADE-PKV013XS25-SS25-1224_01-2100.jpg?$prodimg-d-prt-3-2x$&$quality-retina$&fmt=auto&sm=c"
+                alt="Kids wear Collection"
+                className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Overlay and Text */}
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent p-6 flex flex-col justify-end">
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-00 group-hover:opacity-100">BABY</h3>
+                <p className="text-white text-sm font-medium opacity-80">BODY SUIT</p>
+              </div>
+            </div>
+
+            {/* 6. Outerwear Card (Index 9 in original code) */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
+              <img
+                src="https://5.imimg.com/data5/SELLER/Default/2022/7/ZI/ME/UI/154485093/61ihajqyfol-sx679-sx-ux-sy-uy--1000x1000.jpg"
+                alt="kidswear Collection"
+                className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Overlay and Text */}
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent p-6 flex flex-col justify-end">
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">GIRLS</h3>
+                <p className="text-white text-sm font-medium opacity-80">DRESS</p>
+              </div>
+            </div>
+
+            {/* 7. Mens Wear Card (Index 10 in original code) */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
+              <img
+                src="https://media.babyshopstores.com/i/babyshop/MZGB003A24BLUEC-SHADE-MZGB003A24-AW24-190724_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-zoom$"
+                alt="Men's T-Shirt Collection"
+                className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Overlay and Text */}
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent p-6 flex flex-col justify-end">
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">BABY</h3>
+                <p className="text-white text-sm font-medium opacity-80">ESSENTIALS</p>
+              </div>
+            </div>
+
+            {/* 12. Women T-shirt Card (Index 11 in original code) */}
+            <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
+              <img
+                src="https://cdn.media.amplience.net/i/lmg/SS24G2DR306-MCMS-SS24G2DR306-BSRG28022025_01-2100.jpg?$prodimg-d-prt-3-2x$&$quality-retina$&fmt=auto&sm=c"
+                alt="Women T-Shirt Collection"
+                className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
+              />
+              {/* Overlay and Text */}
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent p-6 flex flex-col justify-end">
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">GIRLS</h3> {/* Changed to be more descriptive */}
+                <p className="text-white text-sm font-medium opacity-80">CASUALS</p>
               </div>
             </div>
 
@@ -658,7 +824,7 @@ function App() {
       </section>
 
       {/* Get In Touch Footer Section - IMPROVED UI */}
-      <footer id="contact" className="bg-gray-900 text-gray-100 pt-20 pb-8 mt-0 border-t border-slate-700">
+      <footer id="contact" className="bg-gray-700 text-gray-100 pt-20 pb-8 mt-0 border-t border-slate-700">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
@@ -667,7 +833,7 @@ function App() {
               <div className="text-3xl font-extrabold tracking-tight mb-8 text-white">
                 SUPREME FASHIONS <span className="text-slate-500 font-bold">(India)</span>
               </div>
-              
+
               {/* Main CTA - Elevated design, made slightly smaller for the footer */}
               <h2 className="text-5xl md:text-6xl font-extrabold mb-10 tracking-tight leading-none text-white">
                 READY TO
@@ -693,13 +859,13 @@ function App() {
                   <div className="">
                     <div className="text-xs text-slate-500 mb-1 font-semibold uppercase">Office & General Inquiries</div>
                     <div className="text-lg font-bold text-white transition-colors duration-200 hover:text-slate-400">
-                        <a href="tel:+9142145400040">+91-421 454000 40 / 43 555 35</a>
+                      <a href="tel:+9142145400040">+91-421 454000 40 / 43 555 35</a>
                     </div>
                   </div>
                   <div className="">
                     <div className="text-xs text-slate-500 mb-1 font-semibold uppercase">Mobile & WhatsApp</div>
                     <div className="text-lg font-bold text-white transition-colors duration-200 hover:text-slate-400">
-                        <a href="tel:+919842228885">+91-98422 28885</a>
+                      <a href="tel:+919842228885">+91-98420 95599</a>
                     </div>
                   </div>
                   {/* Email */}
@@ -714,28 +880,52 @@ function App() {
 
               {/* --- Quick Links & Address --- */}
               <div>
-                <div className="text-sm mb-4 font-semibold uppercase text-slate-400 border-b border-gray-700 pb-2">02 / Navigation</div>
-                
-                <div className="grid grid-cols-2 gap-x-6 gap-y-3 pt-4">
-                  {/* Navigation Links */}
-                  <ul className="space-y-3 text-base text-gray-300">
-                    <li><button onClick={() => scrollToSection('top')} className="hover:text-slate-400 transition duration-200">Home</button></li>
-                    <li><button onClick={() => scrollToSection('about')} className="hover:text-slate-400 transition duration-200">About Us</button></li>
-                    <li><button onClick={() => scrollToSection('services')} className="hover:text-slate-400 transition duration-200">Services</button></li>
-                    <li><button onClick={() => scrollToSection('process')} className="hover:text-slate-400 transition duration-200">Process</button></li>
-                    <li><button onClick={() => scrollToSection('showcase')} className="hover:text-slate-400 transition duration-200">Showcase</button></li>
-                    <li><button onClick={() => scrollToSection('contact')} className="hover:text-slate-400 transition duration-200">Contact</button></li>
-                  </ul>
 
-                  {/* Address */}
-                  <div className="text-base font-medium text-gray-300">
-                    <div className="text-xs text-slate-500 mb-2 font-semibold uppercase">Head Office</div>
-                    1, Samundipuram Main Road,
-                    <br />
-                    Tirupur, Tamil Nadu, 641603. India
-                  </div>
+    {/* Section Header for Navigation */}
+    <div className="text-sm mb-4 font-semibold uppercase text-slate-400 border-b border-gray-700 pb-2">02 / Navigation & Locations</div>
+
+    <div className="grid grid-cols-2 gap-x-6 gap-y-6 pt-4">
+        
+        {/* Left Column: Navigation Links */}
+        <ul className="space-y-3 text-base text-gray-300">
+            {/* Using <a> tags for actual navigation, but keeping buttons since the original code had them. */}
+            <li><button onClick={() => scrollToSection('top')} className="hover:text-slate-400 transition duration-200">HOME</button></li>
+            <li><button onClick={() => scrollToSection('about')} className="hover:text-slate-400 transition duration-200">ABOUT US</button></li>
+            <li><button onClick={() => scrollToSection('services')} className="hover:text-slate-400 transition duration-200">SERVICES</button></li>
+            <li><button onClick={() => scrollToSection('process')} className="hover:text-slate-400 transition duration-200">PROCESS</button></li>
+            <li><button onClick={() => scrollToSection('showcase')} className="hover:text-slate-400 transition duration-200">SHOWCASE</button></li>
+            <li><button onClick={() => scrollToSection('contact')} className="hover:text-slate-400 transition duration-200">CONTACT</button></li>
+        </ul>
+
+        {/* Right Column: Address and Global Reach (Consolidated) */}
+        <div className="space-y-6">
+            {/* Head Quarters Address */}
+            <div>
+                <div className="text-xs text-slate-500 mb-1 font-semibold uppercase">Head Quarters</div>
+                <div className="text-base font-medium text-gray-300">
+                    Tirupur, 641603. India
                 </div>
-              </div>
+            </div>
+
+            {/* Global Presence / Satellite */}
+            <div>
+                <div className="text-xs text-slate-500 mb-2 font-semibold uppercase">Satellite Offices</div>
+                <div className="text-base font-medium text-gray-300 mb-3">
+                    Tirupur, 641603. India (Satellite)
+                </div>
+
+                {/* Country Flags - More prominent and cleaner display */}
+                <div className="flex flex-wrap items-center gap-4 pt-1">
+                    {/* <img src="https://flagcdn.com/in.svg" alt="India" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" /> */}
+                    <img src="https://flagcdn.com/in.svg" alt="India" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
+                    <img src="https://flagcdn.com/us.svg" alt="United States" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
+                    <img src="https://flagcdn.com/lk.svg" alt="Sri Lanka" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
             </div>
           </div>
