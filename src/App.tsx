@@ -120,7 +120,7 @@ function App() {
           <div className="text-left">
             {/* Subtitle/Location - Increased tracking and clear contrast */}
             <span className="uppercase text-sm tracking-[0.3em] font-medium text-slate-600 block mb-3">
-              FROM, THE KNITWEAR CAPITAL OF INDIA
+              FROM THE KNITWEAR CAPITAL OF INDIA
             </span>
 
             {/* Main Headline - Bigger, bolder, and better structured for readability */}
@@ -274,12 +274,12 @@ function App() {
         </div>
       </section>
 
-      {/* Our 6-Step Process Section - Reduced Top Space */}
+      {/* Our 6-Step Process Section - Corrected Image Visibility */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Section Header */}
-          <div className="text-center mb-16 lg:mb-20">
+          <div className="text-center mb-12 lg:mb-16">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-600 mb-2">
               Our Core Methodology
             </p>
@@ -294,20 +294,21 @@ function App() {
           {/* Service Steps Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-            {/* Left Column: Featured Visual/Icon Area */}
-            <div className="hidden lg:flex items-center justify-center relative min-h-[400px]">
-              {/* Placeholder for a large SVG or animation representing the process flow */}
+            {/* Left Column: Featured Visual/Icon Area - CORRECTED CLASSES */}
+            {/* The lg:flex remains to set the layout context on large screens, but 'hidden' is removed. */}
+            <div className="flex items-center justify-center relative min-h-[250px] lg:min-h-[400px] order-1 lg:order-1">
               <div className="w-full h-full bg-slate-100 rounded-3xl flex items-center justify-center overflow-hidden shadow-lg">
                 <img
                   src={Heroimage}
                   alt="Creative Process Visual"
+                  // Reduced height for mobile (h-full is relative to the container height)
                   className="object-cover w-full h-full"
                 />
               </div>
             </div>
 
-            {/* Right Column: Numbered List of Services */}
-            <div className="space-y-8">
+            {/* Right Column: Numbered List of Services - Added order-2 to ensure it appears below the image on mobile */}
+            <div className="space-y-8 order-2 lg:order-2">
 
               {/* 1. PRODUCT SOURCING */}
               <div className="flex group items-start border-b border-gray-200 pb-8 transition-colors duration-300 hover:border-slate-400">
@@ -391,112 +392,105 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* Certifications Section - IMPROVED UI & GRID LAYOUT (4 per line) */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
 
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-600 mb-2">
-              Commitment to Quality
-            </p>
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
-              Our <span className="text-slate-600">Certifications & Accreditations</span>
-            </h2>
-            <p className="text-gray-600 text-lg max-w-3xl mx-auto mt-4">
-              We adhere to the highest international standards, ensuring our products are ethically sourced, sustainably produced, and of premium quality.
+          {/* Section Header - Only the caption "Compliance" */}
+          <div className="text-center mb-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-600">
+              Compliance
             </p>
           </div>
 
-          {/* Certification Logos Grid - Strict 4-Column Layout */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-x-8 gap-y-12 items-center justify-items-center">
+          {/* Certification Logos - Single Line Flex Layout */}
+          <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 sm:gap-x-12 lg:gap-x-16">
 
             {/* GOTS Logo */}
-            <div className="text-center group w-full p-2">
+            <div className="text-center group p-1">
               <img
                 src={GOTS}
                 alt="GOTS Certified"
-                className="h-25 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
-                style={{ maxHeight: '80px' }}
+                // Enforce uniform height and apply visual effects
+                className="h-12 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '48px' }}
               />
             </div>
 
             {/* OEKO-TEX Logo */}
-            <div className="text-center group w-full p-2">
+            <div className="text-center group p-1">
               <img
                 src={OEKO_TEX}
                 alt="OEKO-TEX Certified"
-                className="h-25 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
-                style={{ maxHeight: '80px' }}
+                className="h-12 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '48px' }}
               />
             </div>
 
             {/* SEDEX Logo */}
-            <div className="text-center group w-full p-2">
+            <div className="text-center group p-1">
               <img
                 src={SEDEX}
                 alt="SEDEX Certified"
-                className="h-20 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
-                style={{ maxHeight: '80px' }}
+                className="h-12 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '48px' }}
               />
             </div>
 
             {/* FAIR TRADE Logo */}
-            <div className="text-center group w-full p-2">
+            <div className="text-center group p-1">
               <img
                 src={FAIR_TRADE}
                 alt="Fair Trade Certified"
-                className="h-25 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
-                style={{ maxHeight: '80px' }}
+                className="h-12 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '48px' }}
               />
             </div>
 
             {/* WRAP Logo */}
-            <div className="text-center group w-full p-2">
+            <div className="text-center group p-1">
               <img
                 src={Warap}
                 alt="WRAP Certified"
-                className="h-25 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
-                style={{ maxHeight: '80px' }}
+                className="h-12 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '48px' }}
               />
             </div>
 
-            {/* Organic Cotton Logo (Placeholder name, assuming it's the 'Oragnic' import) */}
-            <div className="text-center group w-full p-2">
+            {/* Organic Cotton Logo */}
+            <div className="text-center group p-1">
               <img
                 src={Oragnic}
                 alt="Organic Certified"
-                className="h-25 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
-                style={{ maxHeight: '80px' }}
+                className="h-12 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '48px' }}
               />
             </div>
 
-            {/* Walmart Accreditation */}
-            <div className="text-center group w-full p-2">
+            {/* Walmart Accreditation (Adjusted to h-12 to fit the line) */}
+            <div className="text-center group p-1">
               <img
                 src={walmart}
                 alt="Walmart Approved Vendor"
-                // Use a slightly different height for this, as it's typically horizontal
                 className="h-10 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
-                style={{ maxHeight: '40px', marginTop: '20px' }} // Center it vertically with others
+                style={{ maxHeight: '48px' }}
               />
             </div>
 
             {/* Disney Accreditation */}
-            <div className="text-center group w-full p-2">
+            <div className="text-center group p-1">
               <img
                 src={Disney}
                 alt="Disney Approved Vendor"
-                className="h-20 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
-                style={{ maxHeight: '80px' }}
+                className="h-12 max-w-full mx-auto group-hover:grayscale-0 group-hover:opacity-100 object-contain"
+                style={{ maxHeight: '48px' }}
               />
             </div>
 
           </div>
         </div>
       </section>
-      
+
       {/* Tailored Manufacturing Solutions - Color Change: Indigo -> Slate Gray */}
       <section id="services" className="py-18 lg:py-10 bg-white overflow-hidden"> {/* Changed from gray-50 to white */}
         <div className="max-w-7xl mx-auto px-6">
@@ -565,7 +559,7 @@ function App() {
               ABOUT US
             </div>
             <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-8 leading-tight">
-              OUR <span className="text-slate-500">PHILOSOPHY</span>
+              <span className="text-slate-500">PHILOSOPHY</span>
             </h2>
 
             {/* Philosophy Text - Cleaned-up columns, larger font, and slight accent */}
@@ -645,7 +639,7 @@ function App() {
 
           {/* Title - Larger, more impactful, and uses accent color */}
           <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 tracking-tight text-gray-500">
-            OUR <span className="text-slate-600">PRODUCT SHOWCASE</span>
+            <span className="text-slate-600">PRODUCT SHOWCASE</span>
           </h2>
 
           {/* Grid Container - Added Spacing */}
@@ -716,7 +710,7 @@ function App() {
               />
               {/* Overlay and Text */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent p-6 flex flex-col justify-end">
-                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-00 group-hover:opacity-100">COMFPRT NIGHTS</h3>
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-00 group-hover:opacity-100">COMFORT NIGHTS</h3>
                 <p className="text-white text-sm font-medium opacity-80">ALL CATEGORIES</p>
               </div>
             </div>
@@ -730,7 +724,7 @@ function App() {
               />
               {/* Overlay and Text */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent p-6 flex flex-col justify-end">
-                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">BABT</h3>
+                <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">BABY</h3>
                 <p className="text-white text-sm font-medium opacity-80">SleepSuit</p>
               </div>
             </div>
@@ -787,7 +781,7 @@ function App() {
               {/* Overlay and Text */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent p-6 flex flex-col justify-end">
                 <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">GIRLS</h3>
-                <p className="text-white text-sm font-medium opacity-80">DRESS</p>
+                <p className="text-white text-sm font-medium opacity-80">CASUALS</p>
               </div>
             </div>
 
@@ -815,7 +809,7 @@ function App() {
               {/* Overlay and Text */}
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent p-6 flex flex-col justify-end">
                 <h3 className="text-xl font-bold text-white uppercase tracking-wider transition-opacity duration-300 group-hover:opacity-100">GIRLS</h3> {/* Changed to be more descriptive */}
-                <p className="text-white text-sm font-medium opacity-80">CASUALS</p>
+                <p className="text-white text-sm font-medium opacity-80">DRESS</p>
               </div>
             </div>
 
@@ -852,7 +846,7 @@ function App() {
 
               {/* --- Contact Details --- */}
               <div>
-                <div className="text-sm mb-4 font-semibold uppercase text-slate-400 border-b border-gray-700 pb-2">01 / Contact Details</div>
+                <div className="text-sm mb-4 font-semibold uppercase text-slate-400 border-b border-gray-700 pb-2">01 / Contact</div>
 
                 {/* Phone (Consolidated for space) */}
                 <div className="space-y-4 pt-4">
@@ -881,51 +875,50 @@ function App() {
               {/* --- Quick Links & Address --- */}
               <div>
 
-    {/* Section Header for Navigation */}
-    <div className="text-sm mb-4 font-semibold uppercase text-slate-400 border-b border-gray-700 pb-2">02 / Navigation & Locations</div>
+                {/* Section Header for Navigation */}
+                <div className="text-sm mb-4 font-semibold uppercase text-slate-400 border-b border-gray-700 pb-2">02 / Navigation & Locations</div>
 
-    <div className="grid grid-cols-2 gap-x-6 gap-y-6 pt-4">
-        
-        {/* Left Column: Navigation Links */}
-        <ul className="space-y-3 text-base text-gray-300">
-            {/* Using <a> tags for actual navigation, but keeping buttons since the original code had them. */}
-            <li><button onClick={() => scrollToSection('top')} className="hover:text-slate-400 transition duration-200">HOME</button></li>
-            <li><button onClick={() => scrollToSection('about')} className="hover:text-slate-400 transition duration-200">ABOUT US</button></li>
-            <li><button onClick={() => scrollToSection('services')} className="hover:text-slate-400 transition duration-200">SERVICES</button></li>
-            <li><button onClick={() => scrollToSection('process')} className="hover:text-slate-400 transition duration-200">PROCESS</button></li>
-            <li><button onClick={() => scrollToSection('showcase')} className="hover:text-slate-400 transition duration-200">SHOWCASE</button></li>
-            <li><button onClick={() => scrollToSection('contact')} className="hover:text-slate-400 transition duration-200">CONTACT</button></li>
-        </ul>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-6 pt-4">
 
-        {/* Right Column: Address and Global Reach (Consolidated) */}
-        <div className="space-y-6">
-            {/* Head Quarters Address */}
-            <div>
-                <div className="text-xs text-slate-500 mb-1 font-semibold uppercase">Head Quarters</div>
-                <div className="text-base font-medium text-gray-300">
-                    Tirupur, 641603. India
-                </div>
-            </div>
+                  {/* Left Column: Navigation Links */}
+                  <ul className="space-y-3 text-base text-gray-300">
+                    {/* Using <a> tags for actual navigation, but keeping buttons since the original code had them. */}
+                    <li><button onClick={() => scrollToSection('top')} className="hover:text-slate-400 transition duration-200">HOME</button></li>
+                    <li><button onClick={() => scrollToSection('about')} className="hover:text-slate-400 transition duration-200">ABOUT US</button></li>
+                    <li><button onClick={() => scrollToSection('services')} className="hover:text-slate-400 transition duration-200">SERVICES</button></li>
+                    <li><button onClick={() => scrollToSection('process')} className="hover:text-slate-400 transition duration-200">PROCESS</button></li>
+                    <li><button onClick={() => scrollToSection('showcase')} className="hover:text-slate-400 transition duration-200">SHOWCASE</button></li>
+                    <li><button onClick={() => scrollToSection('contact')} className="hover:text-slate-400 transition duration-200">CONTACT</button></li>
+                  </ul>
 
-            {/* Global Presence / Satellite */}
-            <div>
-                <div className="text-xs text-slate-500 mb-2 font-semibold uppercase">Satellite Offices</div>
-                <div className="text-base font-medium text-gray-300 mb-3">
+                  {/* Right Column: Address and Global Reach (Consolidated) */}
+                  <div className="space-y-6">
+                    {/* Head Quarters Address */}
+                    <div>
+                      <div className="text-xs text-slate-500 mb-1 font-semibold uppercase">Head Quarters</div>
+                      <div className="text-base font-medium text-gray-300">
+                        Tirupur, 641603. India
+                      </div>
+                    </div>
+
+                    {/* Global Presence / Satellite */}
+                    <div>
+                      <div className="text-xs text-slate-500 mb-2 font-semibold uppercase">Satellite Offices</div>
+                      {/* <div className="text-base font-medium text-gray-300 mb-3">
                     Tirupur, 641603. India (Satellite)
-                </div>
+                </div> */}
 
-                {/* Country Flags - More prominent and cleaner display */}
-                <div className="flex flex-wrap items-center gap-4 pt-1">
-                    {/* <img src="https://flagcdn.com/in.svg" alt="India" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" /> */}
-                    <img src="https://flagcdn.com/in.svg" alt="India" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
-                    <img src="https://flagcdn.com/us.svg" alt="United States" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
-                    <img src="https://flagcdn.com/lk.svg" alt="Sri Lanka" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
-                    
+                      {/* Country Flags - More prominent and cleaner display */}
+                      <div className="flex flex-wrap items-center gap-4 pt-1">
+                        {/* <img src="https://flagcdn.com/in.svg" alt="India" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" /> */}
+                        <img src="https://flagcdn.com/in.svg" alt="India" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
+                        <img src="https://flagcdn.com/us.svg" alt="United States" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
+                        <img src="https://flagcdn.com/lk.svg" alt="Sri Lanka" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+              </div>
 
             </div>
           </div>
@@ -935,7 +928,7 @@ function App() {
 
             {/* Copyright and Location */}
             <div className="flex flex-col md:flex-row gap-4 items-center order-2 md:order-1">
-              <span>Supreme Fashion India © 2025. All Rights Reserved.</span>
+              <span>Supreme Fashions India © 2025. All Rights Reserved.</span>
             </div>
 
           </div>
