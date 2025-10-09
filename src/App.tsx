@@ -644,7 +644,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Title - Larger, more impactful, and uses accent color */}
-          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 tracking-tight text-gray-100">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 tracking-tight text-gray-500">
             OUR <span className="text-slate-600">PRODUCT SHOWCASE</span>
           </h2>
 
