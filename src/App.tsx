@@ -903,7 +903,7 @@ function App() {
                                               <img src="https://flagcdn.com/in.svg" alt="India flag representing headquarters location" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
                                               <img src="https://flagcdn.com/us.svg" alt="United States flag representing satellite office" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
                                               <img src="https://flagcdn.com/lk.svg" alt="Sri Lanka flag representing satellite office" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
-                                              <img src="https://flagcdn.com/my.svg" alt="Malaysia flag representing satellite office" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
+                                              <img src="https://flagcdn.com/sg.svg" alt="Singapore flag representing satellite office" className="h-6 w-9 rounded shadow-lg border border-gray-600 hover:scale-105 transition" />
                                             </div>
                                         </div>
                                     </div>
