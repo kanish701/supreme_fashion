@@ -750,7 +750,7 @@ function App() {
                         {/* 9. Kids Wear Card (Index 8 in original code) */}
                         <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
                             <img
-                                src="https://media.babyshopstores.com/i/babyshop/FSAS002S25PINKC-SHADE-FSAS002S25-SS25-1224_01-2100.jpg?$prodimg-d-prt-3-2x$&$quality-retina$&fmt=auto&sm=c"
+                                src="https://media.babyshopstores.com/i/babyshop/PKV013XS25MULTICOLORMULTISHADE-PKV013XS25-SS25-1224_01-2100.jpg?$prodimg-d-prt-3-2x$&$quality-retina$&fmt=auto&sm=c"
                                 alt="Kids wear Collection"
                                 className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-300 group-hover:scale-105"
                             />
@@ -778,7 +778,7 @@ function App() {
                         {/* 11. Mens Wear Card (Index 10 in original code) */}
                         <div className="group relative overflow-hidden rounded-xl shadow-lg transition-shadow duration-300 hover:shadow-2xl">
                             <img
-                                src="https://media.babyshopstores.com/i/babyshop/MZGB003A24BLUEC-SHADE-MZGB003A24-AW24-190724_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-zoom$"
+                                src="https://media.babyshopstores.com/i/babyshop/FSAS002S25PINKC-SHADE-FSAS002S25-SS25-1224_01-2100.jpg?$prodimg-d-prt-3-2x$&$quality-retina$&fmt=auto&sm=c"
                                 alt="Men's T-Shirt Collection"
                                 className="object-cover w-full h-[350px] md:h-[450px] transition-transform duration-500 group-hover:scale-105"
                             />
