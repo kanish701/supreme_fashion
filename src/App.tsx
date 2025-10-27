@@ -841,20 +841,20 @@ function App() {
                                 {/* Phone (Consolidated for space) */}
                                 <div className="space-y-4 pt-4">
                                     <div className="">
-                                        <div className="text-xs text-slate-500 mb-1 font-semibold uppercase">Office & General Inquiries</div>
+                                        <div className="text-xs text-slate-400 mb-1 font-semibold uppercase">Office & General Inquiries</div>
                                         <div className="text-lg font-bold text-white transition-colors duration-200 hover:text-slate-400">
                                             <a href="tel:+9142145400040">+91-421 454000 40 / 43 555 35</a>
                                         </div>
                                     </div>
                                     <div className="">
-                                        <div className="text-xs text-slate-500 mb-1 font-semibold uppercase">Mobile & WhatsApp</div>
+                                        <div className="text-xs text-slate-400 mb-1 font-semibold uppercase">Mobile & WhatsApp</div>
                                         <div className="text-lg font-bold text-white transition-colors duration-200 hover:text-slate-400">
                                             <a href="tel:+919842228885">+91-98422 28885</a>
                                         </div>
                                     </div>
                                     {/* Email */}
                                     <div className="">
-                                        <div className="text-xs text-slate-500 mb-1 font-semibold uppercase">Email</div>
+                                        <div className="text-xs text-slate-400 mb-1 font-semibold uppercase">Email</div>
                                         <div className="text-lg font-bold text-white">
                                             <a href="mailto:info@supremefashion.in" className="underline hover:text-slate-400 transition duration-200">info@supremeindia.in</a>
                                         </div>
@@ -885,7 +885,7 @@ function App() {
                                     <div className="space-y-6">
                                         {/* Head Quarters Address */}
                                         <div>
-                                            <div className="text-xs text-slate-500 mb-1 font-semibold uppercase">Head Quarters</div>
+                                            <div className="text-xs text-slate-400 mb-1 font-semibold uppercase">Head Quarters</div>
                                             <div className="text-base font-medium text-gray-300">
                                                 Tirupur, 641603. India
                                             </div>
@@ -893,7 +893,7 @@ function App() {
 
                                         {/* Global Presence / Satellite */}
                                         <div>
-                                            <div className="text-xs text-slate-500 mb-2 font-semibold uppercase">Satellite Offices</div>
+                                            <div className="text-xs text-slate-400 mb-2 font-semibold uppercase">Satellite Offices</div>
                                             {/* <div className="text-base font-medium text-gray-300 mb-3">
                                             Tirupur, 641603. India (Satellite)
                                         </div> */}
@@ -914,7 +914,7 @@ function App() {
                     </div>
 
                     {/* --- Bottom Bar --- */}
-                    <div className="border-t border-gray-800 mt-16 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 px-0">
+                    <div className="border-t border-gray-800 mt-16 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-300 px-0">
 
                         {/* Copyright and Location */}
                         <div className="flex flex-col md:flex-row gap-4 items-center order-2 md:order-1">
