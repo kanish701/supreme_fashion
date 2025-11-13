@@ -843,7 +843,7 @@ function App() {
                                     <div className="">
                                         <div className="text-xs text-slate-400 mb-1 font-semibold uppercase">Office & General Inquiries</div>
                                         <div className="text-lg font-bold text-white transition-colors duration-200 hover:text-slate-400">
-                                            <a href="tel:+9142145400040">+91-421 454000 40 / 43 555 35</a>
+                                            <a href="tel:+9142145400040">+91 421 45 400 40 / 43 555 35</a>
                                         </div>
                                     </div>
                                     <div className="">
