@@ -36,7 +36,7 @@ function App() {
                         <div className="flex items-center">
                             <img
                                 src={supreme}
-                                alt="Supreme Fashion Logo"
+                                alt="Supreme Fashions Logo"
                                 // FIX: Removed the filter/invert logic that was hiding the logo on mobile at the top of the page.
                                 className="h-12 w-auto transition-all duration-300"
                             />
@@ -117,7 +117,7 @@ function App() {
                         <h1 className="text-6xl md:text-6xl lg:text-7xl italic font-serif tracking-tight leading-tight mb-4 text-slate-600/90">
                             SUPREME <br className="hidden md:block" />
                             <span className="text-slate-600/90 italic font-serif font-light whitespace-nowrap">
-                                FASHIONS
+                                Fashions
                                 <span className="ml-1 inline-block align-baseline break-words md:whitespace-nowrap text-base md:text-5xl">
                                     (India)
                                 </span>
@@ -856,7 +856,7 @@ function App() {
                                     <div className="">
                                         <div className="text-xs text-slate-400 mb-1 font-semibold uppercase">Email</div>
                                         <div className="text-lg font-bold text-white">
-                                            <a href="mailto:info@supremefashion.in" className="underline hover:text-slate-400 transition duration-200">info@supremeindia.in</a>
+                                            <a href="mailto:info@supremeindia.in" className="underline hover:text-slate-400 transition duration-200">info@supremeindia.in</a>
                                         </div>
                                     </div>
                                 </div>
